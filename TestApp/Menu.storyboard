@@ -4,13 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="AJL-eo-jBg">
             <objects>
                 <viewController id="GnV-Ze-ury" customClass="ProfileViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,8 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcD-WB-vaz" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="70" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JpB-ah-ngm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-el-4cP" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="144" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rc0-f7-L7K"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Dj-t7-F8Z" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="218" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Dlv-fZ-nmb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-ex-3Ua" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
+                                <rect key="frame" x="66" y="292" width="242" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bD9-sn-cqc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="LogoutCommand" destination="GnV-Ze-ury" eventType="touchUpInside" id="lqH-Vq-uZP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-Y8-c1p" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                <rect key="frame" x="46" y="311" width="282" height="44"/>
+                                <rect key="frame" x="66" y="311" width="242" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="v2d-ou-ynR"/>
                                 </constraints>
@@ -35,21 +71,37 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XcD-WB-vaz" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="1Ot-5H-YlY"/>
+                            <constraint firstItem="CqA-el-4cP" firstAttribute="top" secondItem="XcD-WB-vaz" secondAttribute="bottom" constant="30" id="8P1-gP-bdi"/>
+                            <constraint firstItem="XcD-WB-vaz" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="AFE-nv-cIr"/>
+                            <constraint firstItem="zxf-ex-3Ua" firstAttribute="top" secondItem="2Dj-t7-F8Z" secondAttribute="bottom" constant="30" id="Nul-Hj-li3"/>
+                            <constraint firstItem="CqA-el-4cP" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="PoM-me-Mak"/>
+                            <constraint firstItem="2Dj-t7-F8Z" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="Sds-tk-RPN"/>
+                            <constraint firstItem="2Dj-t7-F8Z" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="aHN-Yt-80q"/>
+                            <constraint firstItem="zxf-ex-3Ua" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="dvv-GQ-aAQ"/>
+                            <constraint firstItem="zxf-ex-3Ua" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="eQA-Zj-2mf"/>
+                            <constraint firstItem="CqA-el-4cP" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="oZQ-P9-Zol"/>
+                            <constraint firstItem="XcD-WB-vaz" firstAttribute="top" secondItem="6GC-3p-VMj" secondAttribute="bottom" constant="50" id="rmD-qo-HdC"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerY" secondItem="WBG-ZY-Jrk" secondAttribute="centerY" id="ubq-RI-C6q"/>
-                            <constraint firstItem="oTR-Y8-c1p" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="ug7-et-psW"/>
+                            <constraint firstItem="oTR-Y8-c1p" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="ug7-et-psW"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="usj-oM-hdg"/>
+                            <constraint firstItem="2Dj-t7-F8Z" firstAttribute="top" secondItem="CqA-el-4cP" secondAttribute="bottom" constant="30" id="wnZ-WZ-bhK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="kYH-qD-4py"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="kYH-qD-4py"/>
                     <connections>
+                        <outlet property="EmailTextField" destination="2Dj-t7-F8Z" id="13j-ux-t4H"/>
                         <outlet property="LoginButton" destination="oTR-Y8-c1p" id="fWE-Mn-lxr"/>
+                        <outlet property="LogoutButton" destination="zxf-ex-3Ua" id="xYg-xW-W6P"/>
+                        <outlet property="PhoneNumberTextField" destination="CqA-el-4cP" id="KoH-s3-Ec1"/>
+                        <outlet property="UsernameTextField" destination="XcD-WB-vaz" id="Ptd-sP-dSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoz-ZY-0LA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="404"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="CY4-Tj-tqd">
             <objects>
                 <viewController id="mtA-uc-cW9" customClass="HomeViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="L0R-hL-RFg"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="L0R-hL-RFg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N36-04-tUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

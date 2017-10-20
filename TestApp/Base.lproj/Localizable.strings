@@ -20,6 +20,11 @@
 
 // PROFILE_VIEW
 "PROFILE_VIEW_LOGIN" = "Se connecter";
+"PROFILE_VIEW_TITLE" = "Profil";
+"PROFILE_VIEW_LOGOUT" = "Se déconnecter";
+"PROFILE_VIEW_USERNAME" = "Identifiant";
+"PROFILE_VIEW_PHONE_NUMBER" = "Numéro de téléphone";
+"PROFILE_VIEW_EMAIL" = "Courriel";
 
 // REGISTRATION_VIEW
 "REGISTRATION_VIEW_TITLE" = "Inscription";
@@ -40,3 +45,4 @@
 "PICTURES_VIEW_CHOOSE_AS_MAIN_PHOTO" = "Choisir comme photo principale";
 "PICTURES_VIEW_DELETE" = "Supprimer";
 "PICTURES_VIEW_OPTIONS" = "Options";
+
