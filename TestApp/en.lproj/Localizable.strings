@@ -6,6 +6,9 @@
   Copyright © 2017 ThomasNeyraut. All rights reserved.
 */
 
+// SHARE
+"SHARE_CLOSE" = "Close";
+
 // LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Login";
 "LOGIN_VIEW_TITLE" = "Login";

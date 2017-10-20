@@ -36,11 +36,11 @@ class LoginViewController : UIViewController, UITextFieldDelegate
         CreateAccountButton.setTitle(NSLocalizedString("LOGIN_VIEW_CREATE_ACCOUNT", comment: ""), for: .normal)
         
         UsernameTextField.placeholder = NSLocalizedString("LOGIN_VIEW_USERNAME", comment: "")
-        UsernameTextField.ApplyBaseStyle()
+        UsernameTextField.applyBaseStyle()
         UsernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         PasswordTextField.placeholder = NSLocalizedString("LOGIN_VIEW_PASSWORD", comment: "")
-        PasswordTextField.ApplyBaseStyle()
+        PasswordTextField.applyBaseStyle()
         PasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         LoginButton.setIsEnabledAndBackgroundColor(enabled: PasswordTextField.text != "" && UsernameTextField.text != "")
@@ -80,7 +80,9 @@ class LoginViewController : UIViewController, UITextFieldDelegate
             return;
         }
         
-        // TODO naviguer (fermeture de la modal)
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func createAccountCommand()

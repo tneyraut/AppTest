@@ -10,7 +10,7 @@ import ACFloatingTextfield_Swift
 
 extension ACFloatingTextfield
 {
-    func ApplyBaseStyle()
+    func applyBaseStyle()
     {
         lineColor = AppColors.BlackColor
         selectedLineColor = AppColors.BlackColor

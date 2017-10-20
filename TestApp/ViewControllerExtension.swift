@@ -28,6 +28,24 @@ extension UIViewController
     {
         let navigationController = UINavigationController(rootViewController: viewController)
         
+        navigationController.applyBaseNavigationBarStyle()
+        
+        viewController.addCloseButton()
+        
         present(navigationController, animated: true, completion: nil)
+    }
+    
+    func addCloseButton()
+    {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: NSLocalizedString("SHARE_CLOSE", comment: ""),
+            style: .done,
+            target: self,
+            action: #selector(closeCommand))
+    }
+    
+    @objc private func closeCommand()
+    {
+        dismiss(animated: true, completion: nil)
     }
 }
