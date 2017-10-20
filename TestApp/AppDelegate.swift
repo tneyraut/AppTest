@@ -17,30 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        /*let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        
-        let navigationController = UINavigationController(rootViewController: loginViewController)
-        
-        navigationController.navigationBar.barTintColor = AppColors.NavigationBarColor
-        
-        navigationController.navigationBar.tintColor = UIColor.white
-        
-        let shadow = NSShadow()
-        shadow.shadowColor = AppColors.ShadowColor
-        shadow.shadowOffset = CGSize(width: 0, height: 1)
-        
-        navigationController.navigationBar.titleTextAttributes = NSDictionary(objects: [AppColors.NavigationTextColor, shadow, UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], forKeys: [NSForegroundColorAttributeName as NSCopying, NSShadowAttributeName as NSCopying, NSFontAttributeName as NSCopying]) as? [String : AnyObject]
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-    
-        self.window?.rootViewController = navigationController
-        
-        self.window?.backgroundColor = UIColor.white
-        
-        self.window?.makeKeyAndVisible()*/
-        
         return true
     }
 

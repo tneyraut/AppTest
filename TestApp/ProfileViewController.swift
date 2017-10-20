@@ -20,9 +20,9 @@ class ProfileViewController : UIViewController
     
     @IBAction func LoginCommand()
     {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let storyboard = UIStoryboard(name: Constants.LoginStoryboardId, bundle: nil)
         
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: Constants.LoginViewControllerId)
         
         ShowModal(viewController: loginViewController)
     }

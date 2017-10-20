@@ -87,6 +87,10 @@ class LoginViewController : UIViewController, UITextFieldDelegate
     
     @IBAction func createAccountCommand()
     {
-        // TODO naviguer
+        let storyboard = UIStoryboard(name: Constants.LoginStoryboardId, bundle: nil)
+        
+        let registrationViewController = storyboard.instantiateViewController(withIdentifier: Constants.RegistrationViewControllerId)
+        
+        navigationController?.pushViewController(registrationViewController, animated: true)
     }
 }
