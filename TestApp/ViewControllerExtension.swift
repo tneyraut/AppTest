@@ -23,4 +23,11 @@ extension UIViewController
     {
         view.endEditing(true)
     }
+    
+    func ShowModal(viewController: UIViewController)
+    {
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        present(navigationController, animated: true, completion: nil)
+    }
 }

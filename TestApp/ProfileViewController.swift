@@ -10,5 +10,20 @@ import UIKit
 
 class ProfileViewController : UIViewController
 {
+    @IBOutlet var LoginButton : RoundedButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        LoginButton.setTitle(NSLocalizedString("PROFILE_VIEW_LOGIN", comment: ""), for: .normal)
+    }
+    
+    @IBAction func LoginCommand()
+    {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        
+        ShowModal(viewController: loginViewController)
+    }
 }

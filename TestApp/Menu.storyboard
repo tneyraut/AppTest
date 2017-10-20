@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-Y8-c1p">
-                                <rect key="frame" x="141" y="318" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-Y8-c1p" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
+                                <rect key="frame" x="46" y="311" width="282" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="v2d-ou-ynR"/>
+                                </constraints>
                                 <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="LoginCommand" destination="GnV-Ze-ury" eventType="touchUpInside" id="uF1-Qe-N7b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerY" secondItem="WBG-ZY-Jrk" secondAttribute="centerY" id="ubq-RI-C6q"/>
+                            <constraint firstItem="oTR-Y8-c1p" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="ug7-et-psW"/>
+                            <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="usj-oM-hdg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="kYH-qD-4py"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="oTR-Y8-c1p" id="fWE-Mn-lxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoz-ZY-0LA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

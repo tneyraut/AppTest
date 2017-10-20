@@ -6,6 +6,7 @@
   Copyright © 2017 ThomasNeyraut. All rights reserved.
 */
 
+// LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Login";
 "LOGIN_VIEW_TITLE" = "Login";
 "LOGIN_VIEW_CREATE_ACCOUNT" = "Create an Account";
@@ -13,3 +14,6 @@
 "LOGIN_VIEW_PASSWORD" = "Password";
 "LOGIN_VIEW_ERROR_CREDENTIALS" = "The username and the password enter are incorrect.";
 "LOGIN_VIEW_OK" = "OK";
+
+// PROFILE_VIEW
+"PROFILE_VIEW_LOGIN" = "Login";

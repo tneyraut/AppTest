@@ -139,11 +139,11 @@
 				E8D3AE5A1F98EFE500C9593F /* Models */,
 				E8D3AE591F98EFCA00C9593F /* Views */,
 				E8D3AE281F98EDA500C9593F /* AppDelegate.swift */,
+				E8D3AE5E1F98F1C700C9593F /* AppColors.swift */,
 				E8D3AE321F98EDA500C9593F /* Assets.xcassets */,
 				E8D3AE341F98EDA500C9593F /* LaunchScreen.storyboard */,
 				E8D3AE371F98EDA500C9593F /* Info.plist */,
 				E8D3AE2F1F98EDA500C9593F /* TestApp.xcdatamodeld */,
-				E8D3AE5E1F98F1C700C9593F /* AppColors.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
