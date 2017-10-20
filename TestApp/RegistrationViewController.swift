@@ -53,6 +53,14 @@ class RegistrationViewController : UIViewController, UITextFieldDelegate
         PasswordConfirmationTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         ContinueButton.setTitle(NSLocalizedString("REGISTRATION_VIEW_CONTINUE", comment: ""), for: .normal)
+        
+        let isEnabled = UsernameTextField.text != ""
+            && PhoneNumberTextField.text != ""
+            && EmailTextField.text != ""
+            && PasswordTextField.text != ""
+            && PasswordConfirmationTextField.text != ""
+        
+        ContinueButton.setIsEnabledAndBackgroundColor(enabled: isEnabled)
     }
     
     @objc private func textFieldDidChange(_ textField: UITextField)
@@ -91,6 +99,34 @@ class RegistrationViewController : UIViewController, UITextFieldDelegate
     
     @IBAction func continueCommand()
     {
-        // TODO
+        if (PasswordTextField.text != PasswordConfirmationTextField.text)
+        {
+            let alertView = UIAlertView(
+                title: nil,
+                message: NSLocalizedString("REGISTRATION_VIEW_PASSWORD_ERROR", comment: ""),
+                delegate: self,
+                cancelButtonTitle: NSLocalizedString("SHARE_OK", comment: ""))
+            
+            alertView.show()
+            
+            PasswordConfirmationTextField.showError()
+            PasswordTextField.showError()
+            
+            return
+        }
+        
+        // TODO ajouter des erreurs pour le phone number et l'email ?
+        
+        let storyboard = UIStoryboard(name: Constants.LoginStoryboardId, bundle: nil)
+        
+        let picturesViewController = storyboard.instantiateViewController(withIdentifier: Constants.PicturesViewControllerId) as! PicturesViewController
+        
+        picturesViewController.registrationModel = RegistrationModel(
+            username: UsernameTextField.text!,
+            password: PasswordTextField.text!,
+            email: EmailTextField.text!,
+            phoneNumber: PhoneNumberTextField.text!)
+        
+        navigationController?.pushViewController(picturesViewController, animated: true)
     }
 }

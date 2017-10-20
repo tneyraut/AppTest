@@ -8,6 +8,7 @@
 
 // SHARE
 "SHARE_CLOSE" = "Close";
+"SHARE_OK" = "OK";
 
 // LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Login";
@@ -16,7 +17,6 @@
 "LOGIN_VIEW_USERNAME" = "Username";
 "LOGIN_VIEW_PASSWORD" = "Password";
 "LOGIN_VIEW_ERROR_CREDENTIALS" = "The username and the password enter are incorrect.";
-"LOGIN_VIEW_OK" = "OK";
 
 // PROFILE_VIEW
 "PROFILE_VIEW_LOGIN" = "Login";
@@ -29,3 +29,14 @@
 "REGISTRATION_VIEW_PASSWORD" = "Password";
 "REGISTRATION_VIEW_PASSWORD_CONFIRMATION" = "Password Confirmation";
 "REGISTRATION_VIEW_CONTINUE" = "Continue";
+"REGISTRATION_VIEW_PASSWORD_ERROR" = "This two passwords don't match.";
+
+// PICTURES_VIEW
+"PICTURES_VIEW_TITLE" = "Pictures Selection";
+"PICTURES_VIEW_REGISTRATION" = "Register";
+"PICTURES_VIEW_CANCEL" = "Cancel";
+"PICTURES_VIEW_TAKE_PHOTO" = "Take a picture";
+"PICTURES_VIEW_CHOOSE_PHOTO" = "Choose a picture";
+"PICTURES_VIEW_CHOOSE_AS_MAIN_PHOTO" = "Choose as main picture";
+"PICTURES_VIEW_DELETE" = "Delete";
+"PICTURES_VIEW_OPTIONS" = "Options";

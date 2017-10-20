@@ -11,9 +11,6 @@ import ACFloatingTextfield_Swift
 
 class LoginViewController : UIViewController, UITextFieldDelegate
 {
-    private let _correctUsername = "yoda"
-    private let _correctPassword = "yoda"
-    
     @IBOutlet var LoginButton : RoundedButton!
     @IBOutlet var CreateAccountButton : RoundedButton!
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
@@ -60,28 +57,31 @@ class LoginViewController : UIViewController, UITextFieldDelegate
         
         loginCommand()
         
-        return true;
+        return true
     }
     
     @IBAction func loginCommand()
     {
-        if (UsernameTextField.text != _correctUsername || PasswordTextField.text != _correctPassword)
+        let userDefaults = CacheHelper.getUserDefaults()
+        
+        if (UsernameTextField.text != userDefaults.string(forKey: Constants.UsernameCacheKey)
+            || PasswordTextField.text != userDefaults.string(forKey: Constants.PasswordCacheKey))
         {
             let alertView = UIAlertView(
                 title: nil,
                 message: NSLocalizedString("LOGIN_VIEW_ERROR_CREDENTIALS", comment: ""),
                 delegate: self,
-                cancelButtonTitle: NSLocalizedString("LOGIN_VIEW_OK", comment: ""))
+                cancelButtonTitle: NSLocalizedString("SHARE_OK", comment: ""))
             
             alertView.show()
             
             UsernameTextField.showError()
             PasswordTextField.showError()
             
-            return;
+            return
         }
         
-        // TODO set cache 
+        userDefaults.set(true, forKey: Constants.IsConnectedCacheKey)
         
         navigationController?.popViewController(animated: true)
         

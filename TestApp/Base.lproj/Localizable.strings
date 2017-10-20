@@ -8,6 +8,7 @@
 
 // SHARE
 "SHARE_CLOSE" = "Fermer";
+"SHARE_OK" = "OK";
 
 // LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Se connecter";
@@ -16,7 +17,6 @@
 "LOGIN_VIEW_USERNAME" = "Identifiant";
 "LOGIN_VIEW_PASSWORD" = "Mot de passe";
 "LOGIN_VIEW_ERROR_CREDENTIALS" = "L'identifiant et le mot de passe entrés sont incorrects.";
-"LOGIN_VIEW_OK" = "OK";
 
 // PROFILE_VIEW
 "PROFILE_VIEW_LOGIN" = "Se connecter";
@@ -29,3 +29,14 @@
 "REGISTRATION_VIEW_PASSWORD" = "Mot de passe";
 "REGISTRATION_VIEW_PASSWORD_CONFIRMATION" = "Confirmation du mot de passe";
 "REGISTRATION_VIEW_CONTINUE" = "Continuer";
+"REGISTRATION_VIEW_PASSWORD_ERROR" = "Les deux mots de passe ne correspondent pas.";
+
+// PICTURES_VIEW
+"PICTURES_VIEW_TITLE" = "Sélection des photos";
+"PICTURES_VIEW_REGISTRATION" = "S'inscrire";
+"PICTURES_VIEW_CANCEL" = "Annuler";
+"PICTURES_VIEW_TAKE_PHOTO" = "Prendre une photo";
+"PICTURES_VIEW_CHOOSE_PHOTO" = "Choisir une photo";
+"PICTURES_VIEW_CHOOSE_AS_MAIN_PHOTO" = "Choisir comme photo principale";
+"PICTURES_VIEW_DELETE" = "Supprimer";
+"PICTURES_VIEW_OPTIONS" = "Options";

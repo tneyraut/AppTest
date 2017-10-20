@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PhoneNumberKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +17,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>722B487F43E768E17E3BAB23CFE8B21F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8C5BD10883BD185426DD737247F56DEC</key>
+		<key>10D4C9C5D37D86F9D6E2F81D03B04B32</key>
 		<dict>
 			<key>primary</key>
 			<true/>

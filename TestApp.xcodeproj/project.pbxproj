@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B05D8D63EF10D01856FFAC0D /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1E8573AEE96E3837C292E /* Pods_TestApp.framework */; };
+		E88D6E421F9A62D400067A86 /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E411F9A62D400067A86 /* CacheHelper.swift */; };
+		E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E431F9A670C00067A86 /* RegistrationModel.swift */; };
+		E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E451F9A69C200067A86 /* PicturesViewController.swift */; };
+		E88D6E4A1F9A70AE00067A86 /* RoundedPlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */; };
 		E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */; };
 		E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */; };
 		E8CF3DFD1F9A2AC6008204A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */; };
@@ -50,6 +54,10 @@
 		4E70FD14C9262FF6E1EF6EAD /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		6BC1E8573AEE96E3837C292E /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E3780FB0304FE8C8E72FB6 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E88D6E411F9A62D400067A86 /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
+		E88D6E431F9A670C00067A86 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		E88D6E451F9A69C200067A86 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
+		E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPlaceholderImageView.swift; sourceTree = "<group>"; };
 		E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -113,6 +121,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E88D6E401F9A62C200067A86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E88D6E411F9A62D400067A86 /* CacheHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		E8D3AE1C1F98EDA500C9593F = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +154,7 @@
 		E8D3AE271F98EDA500C9593F /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E88D6E401F9A62C200067A86 /* Helpers */,
 				E8E49C4E1F992BC200EBE24C /* Extensions */,
 				E8E49C471F99242C00EBE24C /* Localization */,
 				E8D3AE641F98F3D000C9593F /* Controls */,
@@ -185,6 +202,7 @@
 		E8D3AE5A1F98EFE500C9593F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E88D6E431F9A670C00067A86 /* RegistrationModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D3AE651F98F3EB00C9593F /* RoundedButton.swift */,
+				E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 			children = (
 				E8D3AE5C1F98F03000C9593F /* LoginViewController.swift */,
 				E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */,
+				E88D6E451F9A69C200067A86 /* PicturesViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -394,12 +414,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACFloatingTextfield_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -446,13 +464,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88D6E4A1F9A70AE00067A86 /* RoundedPlaceholderImageView.swift in Sources */,
 				E8E49C501F992BD300EBE24C /* ViewControllerExtension.swift in Sources */,
 				E8CF3DFD1F9A2AC6008204A4 /* Constants.swift in Sources */,
+				E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */,
 				E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */,
 				E8E49C521F99531800EBE24C /* FloatingTextfieldExtension.swift in Sources */,
+				E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */,
 				E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */,
 				E8D3AE5D1F98F03000C9593F /* LoginViewController.swift in Sources */,
 				E8E49C581F9954E800EBE24C /* HomeViewController.swift in Sources */,
+				E88D6E421F9A62D400067A86 /* CacheHelper.swift in Sources */,
 				E8D3AE661F98F3EB00C9593F /* RoundedButton.swift in Sources */,
 				E8D3AE5F1F98F1C700C9593F /* AppColors.swift in Sources */,
 				E8E49C5A1F99550C00EBE24C /* ProfileViewController.swift in Sources */,
@@ -611,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 774FGZN5LT;
 				INFOPLIST_FILE = TestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,7 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 774FGZN5LT;
 				INFOPLIST_FILE = TestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

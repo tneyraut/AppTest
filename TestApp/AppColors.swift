@@ -21,4 +21,6 @@ class AppColors
     static let BlackColor = UIColor.black
     
     static let WhiteColor = UIColor.white
+    
+    static let GrayPlaceholderColor = UIColor(red:102.0/255.0, green:102.0/255.0, blue:102.0/255.0, alpha:1.0)
 }
