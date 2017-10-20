@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TestApp
+
+  Created by Thomas Mac on 19/10/2017.
+  Copyright © 2017 ThomasNeyraut. All rights reserved.
+*/
+
+"LOGIN_VIEW_LOGIN" = "Login";
+"LOGIN_VIEW_TITLE" = "Login";
+"LOGIN_VIEW_CREATE_ACCOUNT" = "Create an Account";
+"LOGIN_VIEW_USERNAME" = "Username";
+"LOGIN_VIEW_PASSWORD" = "Password";
+"LOGIN_VIEW_ERROR_CREDENTIALS" = "The username and the password enter are incorrect.";
+"LOGIN_VIEW_OK" = "OK";
