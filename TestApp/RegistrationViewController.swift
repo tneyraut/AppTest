@@ -9,7 +9,7 @@
 import UIKit
 import ACFloatingTextfield_Swift
 
-class RegistrationViewController : UIViewController, UITextFieldDelegate
+class RegistrationViewController : BaseViewController, UITextFieldDelegate
 {
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
     @IBOutlet var PhoneNumberTextField : ACFloatingTextfield!
@@ -26,6 +26,8 @@ class RegistrationViewController : UIViewController, UITextFieldDelegate
         hideKeyboard()
         
         setViewElements()
+        
+        addCloseButton()
     }
     
     private func setViewElements()

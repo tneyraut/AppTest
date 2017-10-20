@@ -41,11 +41,11 @@ extension UIViewController
             title: NSLocalizedString("SHARE_CLOSE", comment: ""),
             style: .done,
             target: self,
-            action: #selector(closeCommand))
+            action: #selector(closeModal))
     }
     
-    @objc private func closeCommand()
+    func closeModal()
     {
-        dismiss(animated: true, completion: nil)
+        view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

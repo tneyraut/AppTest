@@ -9,7 +9,7 @@
 import UIKit
 import ACFloatingTextfield_Swift
 
-class LoginViewController : UIViewController, UITextFieldDelegate
+class LoginViewController : BaseViewController, UITextFieldDelegate
 {
     @IBOutlet var LoginButton : RoundedButton!
     @IBOutlet var CreateAccountButton : RoundedButton!

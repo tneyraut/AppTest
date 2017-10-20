@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PicturesViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class PicturesViewController : BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     @IBOutlet var MainImageView : RoundedPlaceholderImageView!
     @IBOutlet var SecondImageView : RoundedPlaceholderImageView!
@@ -18,13 +18,13 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
     
     var registrationModel : RegistrationModel!
     
-    private var imageViewSelected : UIImageView!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         setViewElements()
+        
+        addCloseButton()
     }
     
     private func setViewElements()
@@ -40,7 +40,7 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
     
     @objc private func selectPictureCommand(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        let imageView = tapGestureRecognizer.view as! UIImageView
+        let imageView = tapGestureRecognizer.view as! RoundedPlaceholderImageView
         
         let actionSheet = UIAlertController(
             title: NSLocalizedString("PICTURES_VIEW_OPTIONS", comment: ""),
@@ -52,7 +52,7 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
             actionSheet.addAction(UIAlertAction(
                 title: NSLocalizedString("PICTURES_VIEW_TAKE_PHOTO", comment: ""),
                 style: .default,
-                handler: {(alert: UIAlertAction!) in self.takePicture(imageView: imageView)}))
+                handler: {(alert: UIAlertAction!) in self.takePicture()}))
         }
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
@@ -60,7 +60,7 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
             actionSheet.addAction(UIAlertAction(
                 title: NSLocalizedString("PICTURES_VIEW_CHOOSE_PHOTO", comment: ""),
                 style: .default,
-                handler: {(alert: UIAlertAction!) in self.choosePicture(imageView: imageView)}))
+                handler: {(alert: UIAlertAction!) in self.choosePicture()}))
         }
         
         if imageView.image != nil
@@ -87,10 +87,8 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
         present(actionSheet, animated: true, completion: nil)
     }
     
-    private func takePicture(imageView: UIImageView)
+    private func takePicture()
     {
-        imageViewSelected = imageView
-        
         let imagePicker = UIImagePickerController()
         
         imagePicker.delegate = self
@@ -100,10 +98,8 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
         present(imagePicker, animated: true, completion: nil)
     }
     
-    private func choosePicture(imageView: UIImageView)
+    private func choosePicture()
     {
-        imageViewSelected = imageView
-        
         let imagePicker = UIImagePickerController()
         
         imagePicker.delegate = self
@@ -117,7 +113,18 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
     {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        imageViewSelected.image = image
+        if MainImageView.image == nil
+        {
+            MainImageView.image = image
+        }
+        else if SecondImageView.image == nil
+        {
+            SecondImageView.image = image
+        }
+        else
+        {
+            ThirdImageView.image = image
+        }
         
         dismiss(animated: true, completion: nil)
     }
@@ -134,6 +141,18 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
     private func removePicture(imageView: UIImageView)
     {
         imageView.image = nil
+        
+        if (MainImageView.image == nil && SecondImageView.image != nil)
+        {
+            MainImageView.image = SecondImageView.image
+            SecondImageView.image = nil
+        }
+        
+        if (SecondImageView.image == nil && ThirdImageView.image != nil)
+        {
+            SecondImageView.image = ThirdImageView.image
+            ThirdImageView.image = nil
+        }
     }
     
     @IBAction func registrationCommand()
@@ -149,6 +168,6 @@ class PicturesViewController : UIViewController, UIImagePickerControllerDelegate
         
         userDefaults.synchronize()
         
-        navigationController?.popViewController(animated: true)
+        closeModal()
     }
 }

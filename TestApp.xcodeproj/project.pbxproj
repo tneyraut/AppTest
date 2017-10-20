@@ -12,6 +12,7 @@
 		E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E431F9A670C00067A86 /* RegistrationModel.swift */; };
 		E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E451F9A69C200067A86 /* PicturesViewController.swift */; };
 		E88D6E4A1F9A70AE00067A86 /* RoundedPlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */; };
+		E897D2721F9AA3120028E709 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E897D2711F9AA3120028E709 /* BaseViewController.swift */; };
 		E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */; };
 		E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */; };
 		E8CF3DFD1F9A2AC6008204A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */; };
@@ -58,6 +59,7 @@
 		E88D6E431F9A670C00067A86 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		E88D6E451F9A69C200067A86 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPlaceholderImageView.swift; sourceTree = "<group>"; };
+		E897D2711F9AA3120028E709 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		E8D3AE5B1F98EFF100C9593F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E897D2711F9AA3120028E709 /* BaseViewController.swift */,
 				E8E49C561F99544D00EBE24C /* Menu */,
 				E8E49C551F99542E00EBE24C /* Login */,
 			);
@@ -471,6 +474,7 @@
 				E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */,
 				E8E49C521F99531800EBE24C /* FloatingTextfieldExtension.swift in Sources */,
 				E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */,
+				E897D2721F9AA3120028E709 /* BaseViewController.swift in Sources */,
 				E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */,
 				E8D3AE5D1F98F03000C9593F /* LoginViewController.swift in Sources */,
 				E8E49C581F9954E800EBE24C /* HomeViewController.swift in Sources */,
