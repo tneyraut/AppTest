@@ -182,6 +182,9 @@
                                                     <constraint firstAttribute="height" constant="44" id="ryr-AW-xaZ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="continueCommand" destination="gVh-m6-KLa" eventType="touchUpInside" id="Uc0-UT-veJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,6 +228,14 @@
                             <constraint firstItem="f62-0D-qeH" firstAttribute="centerY" secondItem="fWq-xj-TXB" secondAttribute="centerY" id="kUH-8p-oia"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ContinueButton" destination="MCa-1a-nTZ" id="gKt-CT-MgV"/>
+                        <outlet property="EmailTextField" destination="2I4-vb-Icz" id="fEy-xK-7Oo"/>
+                        <outlet property="PasswordConfirmationTextField" destination="t15-GZ-i58" id="5nh-9R-fdJ"/>
+                        <outlet property="PasswordTextField" destination="bNR-R7-Xpy" id="BJd-Ub-tpX"/>
+                        <outlet property="PhoneNumberTextField" destination="YN0-fP-5hH" id="DWe-aP-5MW"/>
+                        <outlet property="UsernameTextField" destination="wsY-jv-2uL" id="MM6-al-p8N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Fu-Dm-QtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

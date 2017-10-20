@@ -46,12 +46,13 @@ class LoginViewController : UIViewController, UITextFieldDelegate
         LoginButton.setIsEnabledAndBackgroundColor(enabled: PasswordTextField.text != "" && UsernameTextField.text != "")
     }
     
-    func textFieldDidChange(_ textField: UITextField)
+    @objc private func textFieldDidChange(_ textField: UITextField)
     {
         LoginButton.setIsEnabledAndBackgroundColor(enabled: PasswordTextField.text != "" && UsernameTextField.text != "")
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
         if textField == UsernameTextField
         {
             return PasswordTextField.becomeFirstResponder()
@@ -79,6 +80,8 @@ class LoginViewController : UIViewController, UITextFieldDelegate
             
             return;
         }
+        
+        // TODO set cache 
         
         navigationController?.popViewController(animated: true)
         
