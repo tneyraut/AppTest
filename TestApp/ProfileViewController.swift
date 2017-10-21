@@ -9,7 +9,7 @@
 import UIKit
 import ACFloatingTextfield_Swift
 
-class ProfileViewController : UIViewController
+class ProfileViewController : BaseViewController
 {
     @IBOutlet var LogoutButton : RoundedButton!
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
@@ -17,6 +17,8 @@ class ProfileViewController : UIViewController
     @IBOutlet var EmailTextField : ACFloatingTextfield!
     
     @IBOutlet var LoginButton : RoundedButton!
+    
+    @IBOutlet var EditButton : UIBarButtonItem!
     
     private var profileModel : ProfileModel!
     
@@ -37,6 +39,8 @@ class ProfileViewController : UIViewController
     
     private func setViewElements()
     {
+        navigationController?.applyBaseNavigationBarStyle()
+        
         title = NSLocalizedString("PROFILE_VIEW_TITLE", comment: "")
         
         LoginButton.setTitle(NSLocalizedString("PROFILE_VIEW_LOGIN", comment: ""), for: .normal)
@@ -53,6 +57,9 @@ class ProfileViewController : UIViewController
         EmailTextField.placeholder = NSLocalizedString("PROFILE_VIEW_EMAIL", comment: "")
         EmailTextField.applyBaseStyle()
         EmailTextField.isEnabled = false
+        
+        EditButton.title = NSLocalizedString("PROFILE_VIEW_EDIT", comment: "")
+        EditButton.tintColor = AppColors.WhiteColor
     }
     
     private func showOrHiddenViewElements()
@@ -115,5 +122,19 @@ class ProfileViewController : UIViewController
         userDefaults.synchronize()
         
         showOrHiddenViewElements()
+    }
+    
+    @IBAction func EditProfileCommand()
+    {
+        let storyboard = UIStoryboard(name: Constants.MenuStoryboardId, bundle: nil)
+        
+        let editProfileViewController = storyboard.instantiateViewController(withIdentifier: Constants.EditProfileViewControllerId) as! EditProfileViewController
+        
+        editProfileViewController.editProfileModel = EditProfileModel(
+            username: profileModel.Username!,
+            email: profileModel.Email!,
+            phoneNumber: profileModel.PhoneNumber!)
+        
+        ShowModal(viewController: editProfileViewController)
     }
 }

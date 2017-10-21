@@ -9,6 +9,8 @@
 // SHARE
 "SHARE_CLOSE" = "Fermer";
 "SHARE_OK" = "OK";
+"SHARE_SAVE" = "Sauvegarder";
+"SHARE_CANCEL" = "Annuler";
 
 // LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Se connecter";
@@ -25,6 +27,7 @@
 "PROFILE_VIEW_USERNAME" = "Identifiant";
 "PROFILE_VIEW_PHONE_NUMBER" = "Numéro de téléphone";
 "PROFILE_VIEW_EMAIL" = "Courriel";
+"PROFILE_VIEW_EDIT" = "Modifier";
 
 // REGISTRATION_VIEW
 "REGISTRATION_VIEW_TITLE" = "Inscription";
@@ -46,3 +49,9 @@
 "PICTURES_VIEW_DELETE" = "Supprimer";
 "PICTURES_VIEW_OPTIONS" = "Options";
 
+// EDIT_PROFILE_VIEW
+"EDIT_PROFILE_VIEW_TITLE" = "Profil";
+"EDIT_PROFILE_VIEW_USERNAME" = "Identifiant";
+"EDIT_PROFILE_VIEW_EMAIL" = "Courriel";
+"EDIT_PROFILE_VIEW_PHONE_NUMBER" = "Numéro de téléphone";
+"EDIT_PROFILE_VIEW_ERROR_MESSAGE" = "Vous devez spécifier une valeur pour chacun des champs.";

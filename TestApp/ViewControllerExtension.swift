@@ -44,6 +44,15 @@ extension UIViewController
             action: #selector(closeModal))
     }
     
+    func addCancelButton()
+    {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: NSLocalizedString("SHARE_CANCEL", comment: ""),
+            style: .done,
+            target: self,
+            action: #selector(closeModal))
+    }
+    
     func closeModal()
     {
         view.window?.rootViewController?.dismiss(animated: true, completion: nil)

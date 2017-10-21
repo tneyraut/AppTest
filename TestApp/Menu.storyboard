@@ -9,6 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="a8s-RG-LHi">
+            <objects>
+                <navigationController id="F2t-Sd-A7d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7Re-N9-zvX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGj-gg-NFV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GnV-Ze-ury" kind="relationship" relationship="rootViewController" id="FYz-Kt-3r6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95w-n9-lgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="392"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="AJL-eo-jBg">
             <objects>
@@ -22,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcD-WB-vaz" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
-                                <rect key="frame" x="46" y="70" width="283" height="44"/>
+                                <rect key="frame" x="46" y="114" width="283" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="JpB-ah-ngm"/>
                                 </constraints>
@@ -31,7 +48,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-el-4cP" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
-                                <rect key="frame" x="46" y="144" width="283" height="44"/>
+                                <rect key="frame" x="46" y="188" width="283" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="rc0-f7-L7K"/>
                                 </constraints>
@@ -40,7 +57,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Dj-t7-F8Z" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
-                                <rect key="frame" x="46" y="218" width="283" height="44"/>
+                                <rect key="frame" x="46" y="262" width="283" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Dlv-fZ-nmb"/>
                                 </constraints>
@@ -49,7 +66,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-ex-3Ua" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                <rect key="frame" x="66" y="292" width="242" height="44"/>
+                                <rect key="frame" x="66" y="336" width="242" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bD9-sn-cqc"/>
                                 </constraints>
@@ -89,7 +106,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="kYH-qD-4py"/>
+                    <navigationItem key="navigationItem" id="Gac-fJ-Icb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="mdK-5b-xz0">
+                            <connections>
+                                <action selector="EditProfileCommand" destination="GnV-Ze-ury" id="2Lf-Me-YSo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="EditButton" destination="mdK-5b-xz0" id="RXl-E2-H9C"/>
                         <outlet property="EmailTextField" destination="2Dj-t7-F8Z" id="13j-ux-t4H"/>
                         <outlet property="LoginButton" destination="oTR-Y8-c1p" id="fWE-Mn-lxr"/>
                         <outlet property="LogoutButton" destination="zxf-ex-3Ua" id="xYg-xW-W6P"/>
@@ -99,7 +124,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoz-ZY-0LA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="404"/>
+            <point key="canvasLocation" x="1641" y="392"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="Yn3-Vh-AcY">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileViewController" id="Qzm-LS-u2o" customClass="EditProfileViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="378-Y7-rpD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYy-wk-UTe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KED-0S-bA5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XuV-rw-Xrp" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="70" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tht-bX-oFe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVb-UN-kcd" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="164" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DbC-Hj-wQ1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-tf-XYl" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="258" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jyN-jr-c2w"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XuV-rw-Xrp" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="9do-q9-opv"/>
+                            <constraint firstItem="TVb-UN-kcd" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="PI2-RD-9nh"/>
+                            <constraint firstItem="XuV-rw-Xrp" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="R0I-oA-Vsw"/>
+                            <constraint firstItem="TVb-UN-kcd" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="W4D-4n-j5B"/>
+                            <constraint firstItem="Pgj-tf-XYl" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="d8u-RX-oSl"/>
+                            <constraint firstItem="Pgj-tf-XYl" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="l83-tZ-Yyh"/>
+                            <constraint firstItem="XuV-rw-Xrp" firstAttribute="top" secondItem="378-Y7-rpD" secondAttribute="bottom" constant="50" id="xu9-Fq-1Zi"/>
+                            <constraint firstItem="TVb-UN-kcd" firstAttribute="top" secondItem="XuV-rw-Xrp" secondAttribute="bottom" constant="50" id="yhT-J9-1jc"/>
+                            <constraint firstItem="Pgj-tf-XYl" firstAttribute="top" secondItem="TVb-UN-kcd" secondAttribute="bottom" constant="50" id="zAa-DH-Gq7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EmailTextField" destination="TVb-UN-kcd" id="WPV-1G-Nq0"/>
+                        <outlet property="PhoneNumberTextField" destination="Pgj-tf-XYl" id="OCn-tR-vjX"/>
+                        <outlet property="UsernameTextField" destination="XuV-rw-Xrp" id="BTI-Kl-bKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Iz-NU-l6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="392"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ekb-OY-3i3">
+            <objects>
+                <navigationController id="dps-D7-p4x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YDu-8O-CXn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y3Z-aL-yB2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mtA-uc-cW9" kind="relationship" relationship="rootViewController" id="3b4-HJ-JEm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSo-kV-gTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="-331"/>
         </scene>
         <!--Home-->
         <scene sceneID="CY4-Tj-tqd">
@@ -124,10 +229,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="L0R-hL-RFg"/>
+                    <navigationItem key="navigationItem" id="poC-Oy-yhS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N36-04-tUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="-251.42428785607197"/>
+            <point key="canvasLocation" x="1642" y="-331"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m7g-gi-bLI">
@@ -139,8 +245,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mtA-uc-cW9" kind="relationship" relationship="viewControllers" id="VCn-4g-7Qh"/>
-                        <segue destination="GnV-Ze-ury" kind="relationship" relationship="viewControllers" id="BGX-LG-OXm"/>
+                        <segue destination="dps-D7-p4x" kind="relationship" relationship="viewControllers" id="Yl4-pu-Qhh"/>
+                        <segue destination="F2t-Sd-A7d" kind="relationship" relationship="viewControllers" id="Yha-n0-lYc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xma-vE-5Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>

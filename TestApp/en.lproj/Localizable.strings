@@ -9,6 +9,8 @@
 // SHARE
 "SHARE_CLOSE" = "Close";
 "SHARE_OK" = "OK";
+"SHARE_SAVE" = "Save";
+"SHARE_CANCEL" = "Cancel";
 
 // LOGIN_VIEW
 "LOGIN_VIEW_LOGIN" = "Login";
@@ -25,6 +27,7 @@
 "PROFILE_VIEW_USERNAME" = "Username";
 "PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
 "PROFILE_VIEW_EMAIL" = "Email";
+"PROFILE_VIEW_EDIT" = "Edit";
 
 // REGISTRATION_VIEW
 "REGISTRATION_VIEW_TITLE" = "Registration";
@@ -45,3 +48,10 @@
 "PICTURES_VIEW_CHOOSE_AS_MAIN_PHOTO" = "Choose as main picture";
 "PICTURES_VIEW_DELETE" = "Delete";
 "PICTURES_VIEW_OPTIONS" = "Options";
+
+// EDIT_PROFILE_VIEW
+"EDIT_PROFILE_VIEW_TITLE" = "Profile";
+"EDIT_PROFILE_VIEW_USERNAME" = "Username";
+"EDIT_PROFILE_VIEW_EMAIL" = "Email";
+"EDIT_PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
+"EDIT_PROFILE_VIEW_ERROR_MESSAGE" = "You have to enter a value foreach field.";
