@@ -65,8 +65,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCp-Bo-yHO" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
+                                <rect key="frame" x="66" y="356" width="243" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6Kq-Kd-gUf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ChangePasswordCommand" destination="GnV-Ze-ury" eventType="touchUpInside" id="6ig-fE-0gN"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-ex-3Ua" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                <rect key="frame" x="66" y="336" width="242" height="44"/>
+                                <rect key="frame" x="66" y="430" width="242" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bD9-sn-cqc"/>
                                 </constraints>
@@ -91,13 +101,16 @@
                             <constraint firstItem="XcD-WB-vaz" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="1Ot-5H-YlY"/>
                             <constraint firstItem="CqA-el-4cP" firstAttribute="top" secondItem="XcD-WB-vaz" secondAttribute="bottom" constant="30" id="8P1-gP-bdi"/>
                             <constraint firstItem="XcD-WB-vaz" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="AFE-nv-cIr"/>
-                            <constraint firstItem="zxf-ex-3Ua" firstAttribute="top" secondItem="2Dj-t7-F8Z" secondAttribute="bottom" constant="30" id="Nul-Hj-li3"/>
                             <constraint firstItem="CqA-el-4cP" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="PoM-me-Mak"/>
                             <constraint firstItem="2Dj-t7-F8Z" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="Sds-tk-RPN"/>
                             <constraint firstItem="2Dj-t7-F8Z" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="aHN-Yt-80q"/>
+                            <constraint firstItem="JCp-Bo-yHO" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="cKT-Qk-tuJ"/>
                             <constraint firstItem="zxf-ex-3Ua" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="dvv-GQ-aAQ"/>
                             <constraint firstItem="zxf-ex-3Ua" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="eQA-Zj-2mf"/>
+                            <constraint firstItem="zxf-ex-3Ua" firstAttribute="top" secondItem="JCp-Bo-yHO" secondAttribute="bottom" constant="30" id="fiL-hH-5df"/>
+                            <constraint firstItem="JCp-Bo-yHO" firstAttribute="top" secondItem="2Dj-t7-F8Z" secondAttribute="bottom" constant="50" id="mFy-PQ-Dlg"/>
                             <constraint firstItem="CqA-el-4cP" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="oZQ-P9-Zol"/>
+                            <constraint firstItem="JCp-Bo-yHO" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="peC-rY-n3v"/>
                             <constraint firstItem="XcD-WB-vaz" firstAttribute="top" secondItem="6GC-3p-VMj" secondAttribute="bottom" constant="50" id="rmD-qo-HdC"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerY" secondItem="WBG-ZY-Jrk" secondAttribute="centerY" id="ubq-RI-C6q"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="ug7-et-psW"/>
@@ -114,6 +127,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ChangePasswordButton" destination="JCp-Bo-yHO" id="r4n-6G-da3"/>
                         <outlet property="EditButton" destination="mdK-5b-xz0" id="RXl-E2-H9C"/>
                         <outlet property="EmailTextField" destination="2Dj-t7-F8Z" id="13j-ux-t4H"/>
                         <outlet property="LoginButton" destination="oTR-Y8-c1p" id="fWE-Mn-lxr"/>
@@ -188,6 +202,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Iz-NU-l6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473" y="392"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="dh2-OL-4So">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="Ukc-4Y-WeK" customClass="ChangePasswordViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sik-4o-imG"/>
+                        <viewControllerLayoutGuide type="bottom" id="XfS-9q-fdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="srJ-FT-dlg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULg-0s-Bma" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="70" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UfV-k4-wBC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Or-7R-09w" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="164" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fHD-Du-W31"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB2-JE-HMl" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="258" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="viV-1a-qhg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ULg-0s-Bma" firstAttribute="leading" secondItem="srJ-FT-dlg" secondAttribute="leadingMargin" constant="30" id="3LI-bP-XLF"/>
+                            <constraint firstItem="ULg-0s-Bma" firstAttribute="top" secondItem="sik-4o-imG" secondAttribute="bottom" constant="50" id="7lE-b1-kd6"/>
+                            <constraint firstItem="ULg-0s-Bma" firstAttribute="centerX" secondItem="srJ-FT-dlg" secondAttribute="centerX" id="BFu-Nm-ir1"/>
+                            <constraint firstItem="4Or-7R-09w" firstAttribute="leading" secondItem="srJ-FT-dlg" secondAttribute="leadingMargin" constant="30" id="CmM-Gz-ku2"/>
+                            <constraint firstItem="eB2-JE-HMl" firstAttribute="centerX" secondItem="srJ-FT-dlg" secondAttribute="centerX" id="GbF-NT-kxn"/>
+                            <constraint firstItem="4Or-7R-09w" firstAttribute="top" secondItem="ULg-0s-Bma" secondAttribute="bottom" constant="50" id="Gme-v1-A8p"/>
+                            <constraint firstItem="eB2-JE-HMl" firstAttribute="leading" secondItem="srJ-FT-dlg" secondAttribute="leadingMargin" constant="30" id="Ovf-26-3dl"/>
+                            <constraint firstItem="eB2-JE-HMl" firstAttribute="top" secondItem="4Or-7R-09w" secondAttribute="bottom" constant="50" id="Q9S-gC-etV"/>
+                            <constraint firstItem="4Or-7R-09w" firstAttribute="centerX" secondItem="srJ-FT-dlg" secondAttribute="centerX" id="WNX-De-6Fh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CurrentPasswordTextField" destination="ULg-0s-Bma" id="07l-S8-v3s"/>
+                        <outlet property="NewPasswordConfirmationTextField" destination="eB2-JE-HMl" id="Zga-XO-0eW"/>
+                        <outlet property="NewPasswordTextField" destination="4Or-7R-09w" id="XLS-1Z-AtE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXF-Qd-NNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3236" y="392"/>
         </scene>
         <!--Item-->
         <scene sceneID="ekb-OY-3i3">

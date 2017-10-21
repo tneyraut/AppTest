@@ -11,6 +11,7 @@ import ACFloatingTextfield_Swift
 
 class ProfileViewController : BaseViewController
 {
+    @IBOutlet var ChangePasswordButton : RoundedButton!
     @IBOutlet var LogoutButton : RoundedButton!
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
     @IBOutlet var PhoneNumberTextField : ACFloatingTextfield!
@@ -45,6 +46,7 @@ class ProfileViewController : BaseViewController
         
         LoginButton.setTitle(NSLocalizedString("PROFILE_VIEW_LOGIN", comment: ""), for: .normal)
         LogoutButton.setTitle(NSLocalizedString("PROFILE_VIEW_LOGOUT", comment: ""), for: .normal)
+        ChangePasswordButton.setTitle(NSLocalizedString("PROFILE_VIEW_CHANGE_PASSWORD", comment: ""), for: .normal)
         
         UsernameTextField.placeholder = NSLocalizedString("PROFILE_VIEW_USERNAME", comment: "")
         UsernameTextField.applyBaseStyle()
@@ -136,5 +138,14 @@ class ProfileViewController : BaseViewController
             phoneNumber: profileModel.PhoneNumber!)
         
         ShowModal(viewController: editProfileViewController)
+    }
+    
+    @IBAction func ChangePasswordCommand()
+    {
+        let storyboard = UIStoryboard(name: Constants.MenuStoryboardId, bundle: nil)
+        
+        let changePasswordViewController = storyboard.instantiateViewController(withIdentifier: Constants.ChangePasswordViewControllerId)
+        
+        ShowModal(viewController: changePasswordViewController)
     }
 }

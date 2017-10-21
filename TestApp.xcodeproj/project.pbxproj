@@ -10,6 +10,7 @@
 		B05D8D63EF10D01856FFAC0D /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1E8573AEE96E3837C292E /* Pods_TestApp.framework */; };
 		E8141DEA1F9BB9DB00DF8F8E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DE91F9BB9DB00DF8F8E /* EditProfileViewController.swift */; };
 		E8141DEC1F9BBA6100DF8F8E /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DEB1F9BBA6100DF8F8E /* EditProfileModel.swift */; };
+		E8141DEE1F9BCCE400DF8F8E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */; };
 		E88D6E421F9A62D400067A86 /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E411F9A62D400067A86 /* CacheHelper.swift */; };
 		E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E431F9A670C00067A86 /* RegistrationModel.swift */; };
 		E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E451F9A69C200067A86 /* PicturesViewController.swift */; };
@@ -60,6 +61,7 @@
 		A1E3780FB0304FE8C8E72FB6 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E8141DE91F9BB9DB00DF8F8E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		E8141DEB1F9BBA6100DF8F8E /* EditProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E88D6E411F9A62D400067A86 /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
 		E88D6E431F9A670C00067A86 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		E88D6E451F9A69C200067A86 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				E8E49C571F9954E800EBE24C /* HomeViewController.swift */,
 				E8E49C591F99550C00EBE24C /* ProfileViewController.swift */,
 				E8141DE91F9BB9DB00DF8F8E /* EditProfileViewController.swift */,
+				E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				E8CF3DFD1F9A2AC6008204A4 /* Constants.swift in Sources */,
 				E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */,
 				E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */,
+				E8141DEE1F9BCCE400DF8F8E /* ChangePasswordViewController.swift in Sources */,
 				E8E49C521F99531800EBE24C /* FloatingTextfieldExtension.swift in Sources */,
 				E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */,
 				E8141DEA1F9BB9DB00DF8F8E /* EditProfileViewController.swift in Sources */,

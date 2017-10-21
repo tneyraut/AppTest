@@ -24,6 +24,7 @@
 "PROFILE_VIEW_LOGIN" = "Login";
 "PROFILE_VIEW_TITLE" = "Profile";
 "PROFILE_VIEW_LOGOUT" = "Logout";
+"PROFILE_VIEW_CHANGE_PASSWORD" = "Change Password";
 "PROFILE_VIEW_USERNAME" = "Username";
 "PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
 "PROFILE_VIEW_EMAIL" = "Email";
@@ -55,3 +56,12 @@
 "EDIT_PROFILE_VIEW_EMAIL" = "Email";
 "EDIT_PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
 "EDIT_PROFILE_VIEW_ERROR_MESSAGE" = "You have to enter a value foreach field.";
+
+// CHANGE_PASSWORD_VIEW
+"CHANGE_PASSWORD_VIEW_TITLE" = "Profile";
+"CHANGE_PASSWORD_VIEW_CURRENT_PASSWORD" = "Current Password";
+"CHANGE_PASSWORD_VIEW_NEW_PASSWORD" = "New Password";
+"CHANGE_PASSWORD_VIEW_NEW_PASSWORD_CONFIRMATION" = "New Password Confirmation";
+"CHANGE_PASSWORD_VIEW_ERROR_WRONG_CURRENT_PASSWORD" = "The current password enter doesn't match.";
+"CHANGE_PASSWORD_VIEW_ERROR_NO_NEW_PASSWORD" = "Please enter a new password.";
+"CHANGE_PASSWORD_VIEW_ERROR_CONFIRMATION_NEW_PASSWORD" = "This two passwords don't match.";

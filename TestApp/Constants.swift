@@ -15,6 +15,7 @@ class Constants
     static let PicturesViewControllerId = "PicturesViewController"
     static let MenuStoryboardId = "Menu"
     static let EditProfileViewControllerId = "EditProfileViewController"
+    static let ChangePasswordViewControllerId = "ChangePasswordViewController"
     
     // Cache constants
     static let UsernameCacheKey = "UsernameCacheKey"
