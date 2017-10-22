@@ -9,7 +9,7 @@
 import UIKit
 import ACFloatingTextfield_Swift
 
-class EditProfileViewController : BaseViewController
+class EditProfileViewController : BaseViewController, UITextFieldDelegate
 {
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
     @IBOutlet var EmailTextField : ACFloatingTextfield!
@@ -35,20 +35,37 @@ class EditProfileViewController : BaseViewController
         UsernameTextField.placeholder = NSLocalizedString("EDIT_PROFILE_VIEW_USERNAME", comment: "")
         UsernameTextField.text = editProfileModel.Username
         UsernameTextField.applyBaseStyle()
+        UsernameTextField.delegate = self
         
         PhoneNumberTextField.placeholder = NSLocalizedString("EDIT_PROFILE_VIEW_PHONE_NUMBER", comment: "")
         PhoneNumberTextField.text = editProfileModel.PhoneNumber
         PhoneNumberTextField.applyBaseStyle()
+        PhoneNumberTextField.delegate = self
         
         EmailTextField.placeholder = NSLocalizedString("EDIT_PROFILE_VIEW_EMAIL", comment: "")
         EmailTextField.text = editProfileModel.Email
         EmailTextField.applyBaseStyle()
+        EmailTextField.delegate = self
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: NSLocalizedString("SHARE_SAVE", comment: ""),
             style: .done,
             target: self,
             action: #selector(saveCommand))
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        switch textField
+        {
+        case UsernameTextField:
+            return EmailTextField.becomeFirstResponder()
+        case EmailTextField:
+            return PhoneNumberTextField.becomeFirstResponder()
+        default:
+            saveCommand()
+            return true
+        }
     }
     
     @objc private func saveCommand()

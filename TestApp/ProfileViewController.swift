@@ -72,6 +72,7 @@ class ProfileViewController : BaseViewController
         
         LoginButton.isHidden = isConnected
         
+        ChangePasswordButton.isHidden = !isConnected
         LogoutButton.isHidden = !isConnected
         UsernameTextField.isHidden = !isConnected
         PhoneNumberTextField.isHidden = !isConnected

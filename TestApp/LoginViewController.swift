@@ -35,10 +35,12 @@ class LoginViewController : BaseViewController, UITextFieldDelegate
         UsernameTextField.placeholder = NSLocalizedString("LOGIN_VIEW_USERNAME", comment: "")
         UsernameTextField.applyBaseStyle()
         UsernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        UsernameTextField.delegate = self
         
         PasswordTextField.placeholder = NSLocalizedString("LOGIN_VIEW_PASSWORD", comment: "")
         PasswordTextField.applyBaseStyle()
         PasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        PasswordTextField.delegate = self
         
         LoginButton.setIsEnabledAndBackgroundColor(enabled: PasswordTextField.text != "" && UsernameTextField.text != "")
     }

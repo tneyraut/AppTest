@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="a8s-RG-LHi">
             <objects>
                 <navigationController id="F2t-Sd-A7d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7Re-N9-zvX"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="7Re-N9-zvX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGj-gg-NFV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -266,11 +266,11 @@
             </objects>
             <point key="canvasLocation" x="3236" y="392"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="ekb-OY-3i3">
             <objects>
                 <navigationController id="dps-D7-p4x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YDu-8O-CXn"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="YDu-8O-CXn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y3Z-aL-yB2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

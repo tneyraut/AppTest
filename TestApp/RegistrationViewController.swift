@@ -37,22 +37,27 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate
         UsernameTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_USERNAME", comment: "")
         UsernameTextField.applyBaseStyle()
         UsernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        UsernameTextField.delegate = self
         
         PhoneNumberTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_PHONE_NUMBER", comment: "")
         PhoneNumberTextField.applyBaseStyle()
         PhoneNumberTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        PhoneNumberTextField.delegate = self
         
         EmailTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_EMAIL", comment: "")
         EmailTextField.applyBaseStyle()
         EmailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        EmailTextField.delegate = self
         
         PasswordTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_PASSWORD", comment: "")
         PasswordTextField.applyBaseStyle()
         PasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        PasswordTextField.delegate = self
         
         PasswordConfirmationTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_PASSWORD_CONFIRMATION", comment: "")
         PasswordConfirmationTextField.applyBaseStyle()
         PasswordConfirmationTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        PasswordConfirmationTextField.delegate = self
         
         ContinueButton.setTitle(NSLocalizedString("REGISTRATION_VIEW_CONTINUE", comment: ""), for: .normal)
         
