@@ -11,6 +11,7 @@
 		E8141DEA1F9BB9DB00DF8F8E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DE91F9BB9DB00DF8F8E /* EditProfileViewController.swift */; };
 		E8141DEC1F9BBA6100DF8F8E /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DEB1F9BBA6100DF8F8E /* EditProfileModel.swift */; };
 		E8141DEE1F9BCCE400DF8F8E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */; };
+		E850A4311F9D0862002A1E68 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E850A4301F9D0862002A1E68 /* RoundedView.swift */; };
 		E88D6E421F9A62D400067A86 /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E411F9A62D400067A86 /* CacheHelper.swift */; };
 		E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E431F9A670C00067A86 /* RegistrationModel.swift */; };
 		E88D6E461F9A69C200067A86 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E451F9A69C200067A86 /* PicturesViewController.swift */; };
@@ -36,6 +37,8 @@
 		E8E49C541F99541F00EBE24C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E49C531F99541F00EBE24C /* Menu.storyboard */; };
 		E8E49C581F9954E800EBE24C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E49C571F9954E800EBE24C /* HomeViewController.swift */; };
 		E8E49C5A1F99550C00EBE24C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E49C591F99550C00EBE24C /* ProfileViewController.swift */; };
+		E8E909CB1F9CCC9B003E5251 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E909CA1F9CCC9B003E5251 /* UserCell.swift */; };
+		E8E909CE1F9CD34C003E5251 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E909CD1F9CD34C003E5251 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,7 @@
 		E8141DE91F9BB9DB00DF8F8E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		E8141DEB1F9BBA6100DF8F8E /* EditProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		E850A4301F9D0862002A1E68 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		E88D6E411F9A62D400067A86 /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
 		E88D6E431F9A670C00067A86 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		E88D6E451F9A69C200067A86 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		E8E49C531F99541F00EBE24C /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		E8E49C571F9954E800EBE24C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E8E49C591F99550C00EBE24C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E8E909CA1F9CCC9B003E5251 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		E8E909CD1F9CD34C003E5251 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		E8D3AE271F98EDA500C9593F /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8E909CC1F9CD33F003E5251 /* Resources */,
 				E88D6E401F9A62C200067A86 /* Helpers */,
 				E8E49C4E1F992BC200EBE24C /* Extensions */,
 				E8E49C471F99242C00EBE24C /* Localization */,
@@ -234,6 +241,8 @@
 			children = (
 				E8D3AE651F98F3EB00C9593F /* RoundedButton.swift */,
 				E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */,
+				E8E909CA1F9CCC9B003E5251 /* UserCell.swift */,
+				E850A4301F9D0862002A1E68 /* RoundedView.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -275,6 +284,14 @@
 				E8141DED1F9BCCE400DF8F8E /* ChangePasswordViewController.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		E8E909CC1F9CD33F003E5251 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8E909CD1F9CD34C003E5251 /* User.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		EC2149190E4C9D772DCBCE5F /* Frameworks */ = {
@@ -487,6 +504,7 @@
 				E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */,
 				E8141DEE1F9BCCE400DF8F8E /* ChangePasswordViewController.swift in Sources */,
 				E8E49C521F99531800EBE24C /* FloatingTextfieldExtension.swift in Sources */,
+				E850A4311F9D0862002A1E68 /* RoundedView.swift in Sources */,
 				E88D6E441F9A670C00067A86 /* RegistrationModel.swift in Sources */,
 				E8141DEA1F9BB9DB00DF8F8E /* EditProfileViewController.swift in Sources */,
 				E897D2721F9AA3120028E709 /* BaseViewController.swift in Sources */,
@@ -499,7 +517,9 @@
 				E8D3AE5F1F98F1C700C9593F /* AppColors.swift in Sources */,
 				E8E49C5A1F99550C00EBE24C /* ProfileViewController.swift in Sources */,
 				E8D3AE311F98EDA500C9593F /* TestApp.xcdatamodeld in Sources */,
+				E8E909CB1F9CCC9B003E5251 /* UserCell.swift in Sources */,
 				E8D3AE291F98EDA500C9593F /* AppDelegate.swift in Sources */,
+				E8E909CE1F9CD34C003E5251 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

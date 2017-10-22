@@ -65,3 +65,6 @@
 "CHANGE_PASSWORD_VIEW_ERROR_WRONG_CURRENT_PASSWORD" = "Le mot de passe actuel rentré n'est pas valide.";
 "CHANGE_PASSWORD_VIEW_ERROR_NO_NEW_PASSWORD" = "Veuillez rentrer un nouveau mot de passe.";
 "CHANGE_PASSWORD_VIEW_ERROR_CONFIRMATION_NEW_PASSWORD" = "Les deux mots de passe ne correspondent pas.";
+
+// HOME_VIEW
+"HOME_VIEW_TITLE" = "Home";

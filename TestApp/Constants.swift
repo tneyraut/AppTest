@@ -23,4 +23,6 @@ class Constants
     static let IsConnectedCacheKey = "IsConnectedCacheKey"
     static let PhoneNumberCacheKey = "PhoneNumberCacheKey"
     static let EmailCacheKey = "EmailCacheKey"
+    
+    static let UserCellId = "UserCell"
 }

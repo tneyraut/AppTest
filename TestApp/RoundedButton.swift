@@ -14,12 +14,14 @@ class RoundedButton : UIButton
     {
         super.layoutSubviews()
         
-        self.layer.borderColor = AppColors.MainColor.cgColor
-        self.layer.borderWidth = 1
-        self.layer.cornerRadius = 23
+        layer.borderColor = AppColors.MainColor.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 23
         
-        self.layer.shadowColor = AppColors.ShadowColor.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 0.8
         
         self.setTitleColor(AppColors.WhiteColor, for: .normal)
         

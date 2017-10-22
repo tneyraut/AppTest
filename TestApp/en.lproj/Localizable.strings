@@ -65,3 +65,6 @@
 "CHANGE_PASSWORD_VIEW_ERROR_WRONG_CURRENT_PASSWORD" = "The current password enter doesn't match.";
 "CHANGE_PASSWORD_VIEW_ERROR_NO_NEW_PASSWORD" = "Please enter a new password.";
 "CHANGE_PASSWORD_VIEW_ERROR_CONFIRMATION_NEW_PASSWORD" = "This two passwords don't match.";
+
+// HOME_VIEW
+"HOME_VIEW_TITLE" = "Home";
