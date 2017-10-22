@@ -21,12 +21,20 @@ class UserCell : UITableViewCell
         self.user = user
         
         UsernameLabel.text = user.Username
-        //LikeButton TODO change image
-        // TODO set image
+        ImageView.image = UIImage(named: user.PictureName!)
+        
+        setLikeButtonImage()
     }
     
     @IBAction func LikeCommand()
     {
+        user?.IsLiked = !(user?.IsLiked)!
         
+        setLikeButtonImage()
+    }
+    
+    private func setLikeButtonImage()
+    {
+        LikeButton.setImage(UIImage(named: (user?.IsLiked)! ? "fillHeart" : "heart"), for: .normal)
     }
 }

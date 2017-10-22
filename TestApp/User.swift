@@ -12,6 +12,7 @@ class User
     var Email : String?
     var PhoneNumber : String?
     var IsLiked : Bool?
+    var PictureName: String?
     
     init(username: String, email: String, phoneNumber: String, isLiked: Bool)
     {
@@ -19,5 +20,6 @@ class User
         Email = email
         PhoneNumber = phoneNumber
         IsLiked = isLiked
+        PictureName = "userIcon"
     }
 }

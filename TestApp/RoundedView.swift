@@ -23,5 +23,7 @@ class RoundedView : UIView
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowRadius = 8
         layer.shadowOpacity = 0.8
+        
+        layer.masksToBounds = true
     }
 }
