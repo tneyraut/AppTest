@@ -29,6 +29,7 @@
 "PROFILE_VIEW_PHONE_NUMBER" = "Numéro de téléphone";
 "PROFILE_VIEW_EMAIL" = "Courriel";
 "PROFILE_VIEW_EDIT" = "Modifier";
+"PROFILE_VIEW_LOCATION" = "Localisation";
 
 // REGISTRATION_VIEW
 "REGISTRATION_VIEW_TITLE" = "Inscription";
@@ -39,6 +40,7 @@
 "REGISTRATION_VIEW_PASSWORD_CONFIRMATION" = "Confirmation du mot de passe";
 "REGISTRATION_VIEW_CONTINUE" = "Continuer";
 "REGISTRATION_VIEW_PASSWORD_ERROR" = "Les deux mots de passe ne correspondent pas.";
+"REGISTRATION_VIEW_LOCATION" = "Localisation";
 
 // PICTURES_VIEW
 "PICTURES_VIEW_TITLE" = "Sélection des photos";
@@ -56,6 +58,8 @@
 "EDIT_PROFILE_VIEW_EMAIL" = "Courriel";
 "EDIT_PROFILE_VIEW_PHONE_NUMBER" = "Numéro de téléphone";
 "EDIT_PROFILE_VIEW_ERROR_MESSAGE" = "Vous devez spécifier une valeur pour chacun des champs.";
+"EDIT_PROFILE_VIEW_LOCATION" = "Localisation";
+"EDIT_PROFILE_VIEW_UPDATE_LOCATION" = "Mettre à jour la localisation";
 
 // CHANGE_PASSWORD_VIEW
 "CHANGE_PASSWORD_VIEW_TITLE" = "Profil";

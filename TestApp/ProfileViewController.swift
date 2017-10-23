@@ -16,6 +16,7 @@ class ProfileViewController : BaseViewController
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
     @IBOutlet var PhoneNumberTextField : ACFloatingTextfield!
     @IBOutlet var EmailTextField : ACFloatingTextfield!
+    @IBOutlet var LocationTextField : ACFloatingTextfield!
     
     @IBOutlet var LoginButton : RoundedButton!
     
@@ -60,6 +61,10 @@ class ProfileViewController : BaseViewController
         EmailTextField.applyBaseStyle()
         EmailTextField.isEnabled = false
         
+        LocationTextField.placeholder = NSLocalizedString("PROFILE_VIEW_LOCATION", comment: "")
+        LocationTextField.applyBaseStyle()
+        LocationTextField.isEnabled = false
+        
         EditButton.title = NSLocalizedString("PROFILE_VIEW_EDIT", comment: "")
         EditButton.tintColor = AppColors.WhiteColor
     }
@@ -77,6 +82,7 @@ class ProfileViewController : BaseViewController
         UsernameTextField.isHidden = !isConnected
         PhoneNumberTextField.isHidden = !isConnected
         EmailTextField.isHidden = !isConnected
+        LocationTextField.isHidden = !isConnected
         
         if isConnected
         {
@@ -93,7 +99,8 @@ class ProfileViewController : BaseViewController
             profileModel = ProfileModel(
                 username: userDefaults.string(forKey: Constants.UsernameCacheKey)!,
                 email: userDefaults.string(forKey: Constants.EmailCacheKey)!,
-                phoneNumber: userDefaults.string(forKey: Constants.PhoneNumberCacheKey)!)
+                phoneNumber: userDefaults.string(forKey: Constants.PhoneNumberCacheKey)!,
+                location: userDefaults.string(forKey: Constants.LocationCacheKey)!)
             
             return
         }
@@ -101,10 +108,12 @@ class ProfileViewController : BaseViewController
         profileModel.Username = userDefaults.string(forKey: Constants.UsernameCacheKey)
         profileModel.Email = userDefaults.string(forKey: Constants.EmailCacheKey)
         profileModel.PhoneNumber = userDefaults.string(forKey: Constants.PhoneNumberCacheKey)
+        profileModel.Location = userDefaults.string(forKey: Constants.LocationCacheKey)
         
         UsernameTextField.text = profileModel.Username
         EmailTextField.text = profileModel.Email
         PhoneNumberTextField.text = profileModel.PhoneNumber
+        LocationTextField.text = profileModel.Location
     }
     
     @IBAction func LoginCommand()
@@ -136,7 +145,8 @@ class ProfileViewController : BaseViewController
         editProfileViewController.editProfileModel = EditProfileModel(
             username: profileModel.Username!,
             email: profileModel.Email!,
-            phoneNumber: profileModel.PhoneNumber!)
+            phoneNumber: profileModel.PhoneNumber!,
+            location: profileModel.Location!)
         
         ShowModal(viewController: editProfileViewController)
     }

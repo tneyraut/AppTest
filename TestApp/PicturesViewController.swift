@@ -163,6 +163,7 @@ class PicturesViewController : BaseViewController, UIImagePickerControllerDelega
         userDefaults.set(registrationModel.Email, forKey: Constants.EmailCacheKey)
         userDefaults.set(registrationModel.PhoneNumber, forKey: Constants.PhoneNumberCacheKey)
         userDefaults.set(registrationModel.Password, forKey: Constants.PasswordCacheKey)
+        userDefaults.set(registrationModel.Location, forKey: Constants.LocationCacheKey)
         
         userDefaults.set(true, forKey: Constants.IsConnectedCacheKey)
         

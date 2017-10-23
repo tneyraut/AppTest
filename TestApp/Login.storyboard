@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cw-aH-iUW">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-Cm-gmB">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgP-JA-7qS" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
-                                                <rect key="frame" x="30" y="50" width="314" height="44"/>
+                                                <rect key="frame" x="30" y="50" width="315" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="n9e-dT-Hak"/>
                                                 </constraints>
@@ -37,7 +36,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kq-Vo-j6w" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
-                                                <rect key="frame" x="30" y="144" width="314" height="44"/>
+                                                <rect key="frame" x="30" y="144" width="315" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="nHR-tx-8M9"/>
                                                 </constraints>
@@ -46,7 +45,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-ti-L6y" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="238" width="274" height="44"/>
+                                                <rect key="frame" x="50" y="238" width="275" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="MR0-FY-KMp"/>
                                                 </constraints>
@@ -56,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYa-8D-t4w" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="332" width="274" height="44"/>
+                                                <rect key="frame" x="50" y="332" width="275" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="5Lj-Xi-2k0"/>
                                                 </constraints>
@@ -96,9 +95,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Cw-aH-iUW" firstAttribute="centerX" secondItem="FN5-8j-D6E" secondAttribute="centerX" id="5UN-Pn-3J3"/>
-                            <constraint firstItem="8Cw-aH-iUW" firstAttribute="top" secondItem="QNl-2X-VZK" secondAttribute="bottom" constant="-20" id="VFj-sJ-pXE"/>
+                            <constraint firstItem="8Cw-aH-iUW" firstAttribute="height" secondItem="FN5-8j-D6E" secondAttribute="height" id="8jd-PO-7yW"/>
                             <constraint firstItem="8Cw-aH-iUW" firstAttribute="centerY" secondItem="FN5-8j-D6E" secondAttribute="centerY" id="tiB-wX-ds3"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="8Cw-aH-iUW" secondAttribute="leading" constant="16" id="uDG-No-hRo"/>
+                            <constraint firstItem="8Cw-aH-iUW" firstAttribute="width" secondItem="FN5-8j-D6E" secondAttribute="width" id="ytr-ei-Jme"/>
                         </constraints>
                     </view>
                     <connections>
@@ -176,7 +175,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCa-1a-nTZ" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="410" width="274" height="44"/>
+                                                <rect key="frame" x="50" y="484" width="274" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="ryr-AW-xaZ"/>
                                                 </constraints>
@@ -185,24 +184,36 @@
                                                     <action selector="continueCommand" destination="gVh-m6-KLa" eventType="touchUpInside" id="Uc0-UT-veJ"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-ml-hPf" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                                <rect key="frame" x="30" y="390" width="315" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="dqk-oW-8t6"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="t15-GZ-i58" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="03x-k8-hhX"/>
-                                            <constraint firstItem="MCa-1a-nTZ" firstAttribute="top" secondItem="t15-GZ-i58" secondAttribute="bottom" constant="50" id="4PO-sm-VbI"/>
+                                            <constraint firstItem="VF5-ml-hPf" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="4VV-MI-NZw"/>
                                             <constraint firstItem="2I4-vb-Icz" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="5kj-k8-Xzd"/>
                                             <constraint firstItem="bNR-R7-Xpy" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="6At-Rw-NTG"/>
                                             <constraint firstItem="MCa-1a-nTZ" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="8DJ-D3-AK8"/>
                                             <constraint firstItem="wsY-jv-2uL" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="8e5-r2-PNz"/>
                                             <constraint firstItem="t15-GZ-i58" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="DeD-IP-q3K"/>
                                             <constraint firstItem="bNR-R7-Xpy" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="FUG-EI-oso"/>
+                                            <constraint firstItem="MCa-1a-nTZ" firstAttribute="top" secondItem="VF5-ml-hPf" secondAttribute="bottom" constant="50" id="SJf-uC-y72"/>
                                             <constraint firstItem="wsY-jv-2uL" firstAttribute="top" secondItem="9aA-xJ-R4e" secondAttribute="top" constant="20" id="UJp-fu-aHd"/>
                                             <constraint firstItem="bNR-R7-Xpy" firstAttribute="top" secondItem="2I4-vb-Icz" secondAttribute="bottom" constant="30" id="dSn-8c-ME3"/>
                                             <constraint firstItem="2I4-vb-Icz" firstAttribute="top" secondItem="YN0-fP-5hH" secondAttribute="bottom" constant="30" id="def-WG-0Uw"/>
                                             <constraint firstItem="MCa-1a-nTZ" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="50" id="gxc-ao-8xC"/>
                                             <constraint firstItem="YN0-fP-5hH" firstAttribute="centerX" secondItem="9aA-xJ-R4e" secondAttribute="centerX" id="iD5-D3-L6C"/>
+                                            <constraint firstItem="VF5-ml-hPf" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="jeS-gV-m1j"/>
                                             <constraint firstItem="2I4-vb-Icz" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="nLl-Xj-UnM"/>
                                             <constraint firstItem="YN0-fP-5hH" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="njl-oq-sGW"/>
+                                            <constraint firstItem="VF5-ml-hPf" firstAttribute="top" secondItem="t15-GZ-i58" secondAttribute="bottom" constant="30" id="rCG-QD-qpO"/>
                                             <constraint firstItem="wsY-jv-2uL" firstAttribute="leading" secondItem="9aA-xJ-R4e" secondAttribute="leading" constant="30" id="w1K-kr-Ydz"/>
                                             <constraint firstItem="YN0-fP-5hH" firstAttribute="top" secondItem="wsY-jv-2uL" secondAttribute="bottom" constant="30" id="xod-WJ-m9n"/>
                                             <constraint firstItem="t15-GZ-i58" firstAttribute="top" secondItem="bNR-R7-Xpy" secondAttribute="bottom" constant="30" id="zJw-Ir-vfF"/>
@@ -221,15 +232,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f62-0D-qeH" firstAttribute="height" secondItem="fWq-xj-TXB" secondAttribute="height" id="7id-Lj-Q2m"/>
                             <constraint firstItem="f62-0D-qeH" firstAttribute="centerX" secondItem="fWq-xj-TXB" secondAttribute="centerX" id="I5k-CY-qhA"/>
-                            <constraint firstItem="f62-0D-qeH" firstAttribute="top" secondItem="3KS-Ws-gvf" secondAttribute="bottom" constant="-20" id="UDU-zf-UhO"/>
-                            <constraint firstItem="f62-0D-qeH" firstAttribute="leading" secondItem="fWq-xj-TXB" secondAttribute="leadingMargin" constant="-16" id="dcv-WR-WIY"/>
                             <constraint firstItem="f62-0D-qeH" firstAttribute="centerY" secondItem="fWq-xj-TXB" secondAttribute="centerY" id="kUH-8p-oia"/>
+                            <constraint firstItem="f62-0D-qeH" firstAttribute="width" secondItem="fWq-xj-TXB" secondAttribute="width" id="luA-aW-dyp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ContinueButton" destination="MCa-1a-nTZ" id="gKt-CT-MgV"/>
                         <outlet property="EmailTextField" destination="2I4-vb-Icz" id="fEy-xK-7Oo"/>
+                        <outlet property="LocationTextField" destination="VF5-ml-hPf" id="CAK-no-6a6"/>
                         <outlet property="PasswordConfirmationTextField" destination="t15-GZ-i58" id="5nh-9R-fdJ"/>
                         <outlet property="PasswordTextField" destination="bNR-R7-Xpy" id="BJd-Ub-tpX"/>
                         <outlet property="PhoneNumberTextField" destination="YN0-fP-5hH" id="DWe-aP-5MW"/>
@@ -319,8 +331,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hf6-ML-dk2" firstAttribute="top" secondItem="3um-35-aDg" secondAttribute="bottom" constant="-20" id="GO9-FH-C3y"/>
-                            <constraint firstItem="hf6-ML-dk2" firstAttribute="leading" secondItem="hKe-G7-ehf" secondAttribute="leadingMargin" constant="-16" id="IFQ-1e-h3b"/>
+                            <constraint firstItem="hf6-ML-dk2" firstAttribute="centerX" secondItem="hKe-G7-ehf" secondAttribute="centerX" id="cdL-Eq-DRo"/>
+                            <constraint firstItem="hf6-ML-dk2" firstAttribute="height" secondItem="hKe-G7-ehf" secondAttribute="height" id="mlg-0E-qBi"/>
                             <constraint firstItem="hf6-ML-dk2" firstAttribute="centerY" secondItem="hKe-G7-ehf" secondAttribute="centerY" id="qh5-yY-Sch"/>
                             <constraint firstItem="hf6-ML-dk2" firstAttribute="width" secondItem="hKe-G7-ehf" secondAttribute="width" id="tbX-lF-eeG"/>
                         </constraints>

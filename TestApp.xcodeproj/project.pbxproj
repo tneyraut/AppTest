@@ -18,6 +18,7 @@
 		E88D6E4A1F9A70AE00067A86 /* RoundedPlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */; };
 		E897D2721F9AA3120028E709 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E897D2711F9AA3120028E709 /* BaseViewController.swift */; };
 		E897D2741F9AA92B0028E709 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E897D2731F9AA92B0028E709 /* ProfileModel.swift */; };
+		E8BBF59C1F9E2EAD00C01DD0 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF59B1F9E2EAD00C01DD0 /* LocationHelper.swift */; };
 		E8CF3DF91F9A2000008204A4 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */; };
 		E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */; };
 		E8CF3DFD1F9A2AC6008204A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */; };
@@ -72,6 +73,7 @@
 		E88D6E491F9A70AE00067A86 /* RoundedPlaceholderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPlaceholderImageView.swift; sourceTree = "<group>"; };
 		E897D2711F9AA3120028E709 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E897D2731F9AA92B0028E709 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E8BBF59B1F9E2EAD00C01DD0 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		E8CF3DF81F9A2000008204A4 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		E8CF3DFA1F9A265F008204A4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E8CF3DFC1F9A2AC6008204A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E88D6E411F9A62D400067A86 /* CacheHelper.swift */,
+				E8BBF59B1F9E2EAD00C01DD0 /* LocationHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				E897D2721F9AA3120028E709 /* BaseViewController.swift in Sources */,
 				E8CF3DFB1F9A265F008204A4 /* RegistrationViewController.swift in Sources */,
 				E897D2741F9AA92B0028E709 /* ProfileModel.swift in Sources */,
+				E8BBF59C1F9E2EAD00C01DD0 /* LocationHelper.swift in Sources */,
 				E8D3AE5D1F98F03000C9593F /* LoginViewController.swift in Sources */,
 				E8E49C581F9954E800EBE24C /* HomeViewController.swift in Sources */,
 				E88D6E421F9A62D400067A86 /* CacheHelper.swift in Sources */,

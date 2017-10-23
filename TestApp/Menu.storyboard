@@ -65,8 +65,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-vC-dkw" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="336" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0AX-2U-4RD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCp-Bo-yHO" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                <rect key="frame" x="66" y="356" width="243" height="44"/>
+                                <rect key="frame" x="66" y="430" width="243" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6Kq-Kd-gUf"/>
                                 </constraints>
@@ -76,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-ex-3Ua" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
-                                <rect key="frame" x="66" y="430" width="242" height="44"/>
+                                <rect key="frame" x="66" y="504" width="242" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bD9-sn-cqc"/>
                                 </constraints>
@@ -108,13 +117,16 @@
                             <constraint firstItem="zxf-ex-3Ua" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="dvv-GQ-aAQ"/>
                             <constraint firstItem="zxf-ex-3Ua" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="eQA-Zj-2mf"/>
                             <constraint firstItem="zxf-ex-3Ua" firstAttribute="top" secondItem="JCp-Bo-yHO" secondAttribute="bottom" constant="30" id="fiL-hH-5df"/>
-                            <constraint firstItem="JCp-Bo-yHO" firstAttribute="top" secondItem="2Dj-t7-F8Z" secondAttribute="bottom" constant="50" id="mFy-PQ-Dlg"/>
+                            <constraint firstItem="JCp-Bo-yHO" firstAttribute="top" secondItem="dgv-vC-dkw" secondAttribute="bottom" constant="50" id="hcY-qA-4i9"/>
+                            <constraint firstItem="dgv-vC-dkw" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="jYg-rK-g3q"/>
                             <constraint firstItem="CqA-el-4cP" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="oZQ-P9-Zol"/>
                             <constraint firstItem="JCp-Bo-yHO" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="peC-rY-n3v"/>
                             <constraint firstItem="XcD-WB-vaz" firstAttribute="top" secondItem="6GC-3p-VMj" secondAttribute="bottom" constant="50" id="rmD-qo-HdC"/>
+                            <constraint firstItem="dgv-vC-dkw" firstAttribute="top" secondItem="2Dj-t7-F8Z" secondAttribute="bottom" constant="30" id="tcM-UB-urG"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerY" secondItem="WBG-ZY-Jrk" secondAttribute="centerY" id="ubq-RI-C6q"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="50" id="ug7-et-psW"/>
                             <constraint firstItem="oTR-Y8-c1p" firstAttribute="centerX" secondItem="WBG-ZY-Jrk" secondAttribute="centerX" id="usj-oM-hdg"/>
+                            <constraint firstItem="dgv-vC-dkw" firstAttribute="leading" secondItem="WBG-ZY-Jrk" secondAttribute="leadingMargin" constant="30" id="wZv-1F-yGH"/>
                             <constraint firstItem="2Dj-t7-F8Z" firstAttribute="top" secondItem="CqA-el-4cP" secondAttribute="bottom" constant="30" id="wnZ-WZ-bhK"/>
                         </constraints>
                     </view>
@@ -130,6 +142,7 @@
                         <outlet property="ChangePasswordButton" destination="JCp-Bo-yHO" id="r4n-6G-da3"/>
                         <outlet property="EditButton" destination="mdK-5b-xz0" id="RXl-E2-H9C"/>
                         <outlet property="EmailTextField" destination="2Dj-t7-F8Z" id="13j-ux-t4H"/>
+                        <outlet property="LocationTextField" destination="dgv-vC-dkw" id="toc-sk-H44"/>
                         <outlet property="LoginButton" destination="oTR-Y8-c1p" id="fWE-Mn-lxr"/>
                         <outlet property="LogoutButton" destination="zxf-ex-3Ua" id="xYg-xW-W6P"/>
                         <outlet property="PhoneNumberTextField" destination="CqA-el-4cP" id="KoH-s3-Ec1"/>
@@ -179,14 +192,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-IY-TcG" customClass="ACFloatingTextfield" customModule="ACFloatingTextfield_Swift">
+                                <rect key="frame" x="46" y="352" width="283" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZsL-WP-X9f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jep-Jb-i8U" customClass="RoundedButton" customModule="TestApp" customModuleProvider="target">
+                                <rect key="frame" x="66" y="411" width="242" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1Xf-AL-wSf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="updateLocationCommand" destination="Qzm-LS-u2o" eventType="touchUpInside" id="pNZ-Jb-4zy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XuV-rw-Xrp" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="9do-q9-opv"/>
+                            <constraint firstItem="jep-Jb-i8U" firstAttribute="top" secondItem="RgL-IY-TcG" secondAttribute="bottom" constant="15" id="NvW-Hy-OqN"/>
                             <constraint firstItem="TVb-UN-kcd" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="PI2-RD-9nh"/>
                             <constraint firstItem="XuV-rw-Xrp" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="R0I-oA-Vsw"/>
                             <constraint firstItem="TVb-UN-kcd" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="W4D-4n-j5B"/>
+                            <constraint firstItem="jep-Jb-i8U" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="50" id="Zhj-iI-2DF"/>
+                            <constraint firstItem="RgL-IY-TcG" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="cBc-u3-nvQ"/>
+                            <constraint firstItem="RgL-IY-TcG" firstAttribute="top" secondItem="Pgj-tf-XYl" secondAttribute="bottom" constant="50" id="cTP-wI-s7A"/>
                             <constraint firstItem="Pgj-tf-XYl" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="d8u-RX-oSl"/>
+                            <constraint firstItem="jep-Jb-i8U" firstAttribute="centerX" secondItem="KED-0S-bA5" secondAttribute="centerX" id="fJe-OD-Jsw"/>
+                            <constraint firstItem="RgL-IY-TcG" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="jdL-BF-zxF"/>
                             <constraint firstItem="Pgj-tf-XYl" firstAttribute="leading" secondItem="KED-0S-bA5" secondAttribute="leadingMargin" constant="30" id="l83-tZ-Yyh"/>
                             <constraint firstItem="XuV-rw-Xrp" firstAttribute="top" secondItem="378-Y7-rpD" secondAttribute="bottom" constant="50" id="xu9-Fq-1Zi"/>
                             <constraint firstItem="TVb-UN-kcd" firstAttribute="top" secondItem="XuV-rw-Xrp" secondAttribute="bottom" constant="50" id="yhT-J9-1jc"/>
@@ -195,7 +233,9 @@
                     </view>
                     <connections>
                         <outlet property="EmailTextField" destination="TVb-UN-kcd" id="WPV-1G-Nq0"/>
+                        <outlet property="LocationTextField" destination="RgL-IY-TcG" id="t6O-bg-SAl"/>
                         <outlet property="PhoneNumberTextField" destination="Pgj-tf-XYl" id="OCn-tR-vjX"/>
+                        <outlet property="UpdateLocationButton" destination="jep-Jb-i8U" id="dvQ-po-Lvi"/>
                         <outlet property="UsernameTextField" destination="XuV-rw-Xrp" id="BTI-Kl-bKL"/>
                     </connections>
                 </viewController>
@@ -296,14 +336,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yAI-Q8-NOY">
-                                <rect key="frame" x="0.0" y="64" width="374" height="539"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" id="oQI-WR-OuM" customClass="UserCell" customModule="TestApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oQI-WR-OuM" id="5n2-7j-ZXY">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-0h-0aZ" customClass="RoundedView" customModule="TestApp" customModuleProvider="target">
@@ -394,10 +434,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yAI-Q8-NOY" firstAttribute="top" secondItem="vnh-7P-3TZ" secondAttribute="bottom" id="9WC-33-Iay"/>
+                            <constraint firstItem="yAI-Q8-NOY" firstAttribute="height" secondItem="pLI-Hp-lRJ" secondAttribute="height" id="0L3-aJ-d4a"/>
                             <constraint firstItem="yAI-Q8-NOY" firstAttribute="centerX" secondItem="pLI-Hp-lRJ" secondAttribute="centerX" id="Oz2-ZM-RyH"/>
+                            <constraint firstItem="yAI-Q8-NOY" firstAttribute="width" secondItem="pLI-Hp-lRJ" secondAttribute="width" id="YcI-No-jXl"/>
                             <constraint firstItem="yAI-Q8-NOY" firstAttribute="centerY" secondItem="pLI-Hp-lRJ" secondAttribute="centerY" id="s2C-iL-0Ml"/>
-                            <constraint firstItem="yAI-Q8-NOY" firstAttribute="leading" secondItem="pLI-Hp-lRJ" secondAttribute="leadingMargin" constant="-16" id="tYB-UM-ARy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="L0R-hL-RFg"/>

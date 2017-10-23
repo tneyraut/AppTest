@@ -16,6 +16,7 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate
     @IBOutlet var EmailTextField : ACFloatingTextfield!
     @IBOutlet var PasswordTextField : ACFloatingTextfield!
     @IBOutlet var PasswordConfirmationTextField : ACFloatingTextfield!
+    @IBOutlet var LocationTextField : ACFloatingTextfield!
     
     @IBOutlet var ContinueButton : RoundedButton!
     
@@ -28,6 +29,10 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate
         setViewElements()
         
         addCloseButton()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(UpdateLocationNotificationRecieved), name: Notification.Name.init(Constants.UpdateLocationMessage), object: nil)
+        
+        LocationHelper.getLocation()
     }
     
     private func setViewElements()
@@ -58,6 +63,10 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate
         PasswordConfirmationTextField.applyBaseStyle()
         PasswordConfirmationTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         PasswordConfirmationTextField.delegate = self
+        
+        LocationTextField.placeholder = NSLocalizedString("REGISTRATION_VIEW_LOCATION", comment: "")
+        LocationTextField.applyBaseStyle()
+        LocationTextField.isEnabled = false
         
         ContinueButton.setTitle(NSLocalizedString("REGISTRATION_VIEW_CONTINUE", comment: ""), for: .normal)
         
@@ -132,8 +141,14 @@ class RegistrationViewController : BaseViewController, UITextFieldDelegate
             username: UsernameTextField.text!,
             password: PasswordTextField.text!,
             email: EmailTextField.text!,
-            phoneNumber: PhoneNumberTextField.text!)
+            phoneNumber: PhoneNumberTextField.text!,
+            location: LocationTextField.text!)
         
         navigationController?.pushViewController(picturesViewController, animated: true)
+    }
+    
+    @objc private func UpdateLocationNotificationRecieved(notification: NSNotification)
+    {
+        LocationTextField.text = notification.object as! String
     }
 }

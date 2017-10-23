@@ -29,6 +29,7 @@
 "PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
 "PROFILE_VIEW_EMAIL" = "Email";
 "PROFILE_VIEW_EDIT" = "Edit";
+"PROFILE_VIEW_LOCATION" = "Location";
 
 // REGISTRATION_VIEW
 "REGISTRATION_VIEW_TITLE" = "Registration";
@@ -39,6 +40,7 @@
 "REGISTRATION_VIEW_PASSWORD_CONFIRMATION" = "Password Confirmation";
 "REGISTRATION_VIEW_CONTINUE" = "Continue";
 "REGISTRATION_VIEW_PASSWORD_ERROR" = "This two passwords don't match.";
+"REGISTRATION_VIEW_LOCATION" = "Location";
 
 // PICTURES_VIEW
 "PICTURES_VIEW_TITLE" = "Pictures Selection";
@@ -56,6 +58,8 @@
 "EDIT_PROFILE_VIEW_EMAIL" = "Email";
 "EDIT_PROFILE_VIEW_PHONE_NUMBER" = "Phone Number";
 "EDIT_PROFILE_VIEW_ERROR_MESSAGE" = "You have to enter a value foreach field.";
+"EDIT_PROFILE_VIEW_LOCATION" = "Location";
+"EDIT_PROFILE_VIEW_UPDATE_LOCATION" = "Update Location";
 
 // CHANGE_PASSWORD_VIEW
 "CHANGE_PASSWORD_VIEW_TITLE" = "Profile";

@@ -14,6 +14,9 @@ class EditProfileViewController : BaseViewController, UITextFieldDelegate
     @IBOutlet var UsernameTextField : ACFloatingTextfield!
     @IBOutlet var EmailTextField : ACFloatingTextfield!
     @IBOutlet var PhoneNumberTextField : ACFloatingTextfield!
+    @IBOutlet var LocationTextField : ACFloatingTextfield!
+    
+    @IBOutlet var UpdateLocationButton : UIButton!
     
     var editProfileModel : EditProfileModel!
     
@@ -26,6 +29,8 @@ class EditProfileViewController : BaseViewController, UITextFieldDelegate
         hideKeyboard()
         
         addCancelButton()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(UpdateLocationNotificationRecieved), name: Notification.Name.init(Constants.UpdateLocationMessage), object: nil)
     }
     
     private func setViewElement()
@@ -47,6 +52,13 @@ class EditProfileViewController : BaseViewController, UITextFieldDelegate
         EmailTextField.applyBaseStyle()
         EmailTextField.delegate = self
         
+        LocationTextField.placeholder = NSLocalizedString("EDIT_PROFILE_VIEW_LOCATION", comment: "")
+        LocationTextField.text = editProfileModel.Location
+        LocationTextField.applyBaseStyle()
+        LocationTextField.isEnabled = false
+        
+        UpdateLocationButton.setTitle(NSLocalizedString("EDIT_PROFILE_VIEW_UPDATE_LOCATION", comment: ""), for: .normal)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: NSLocalizedString("SHARE_SAVE", comment: ""),
             style: .done,
@@ -66,6 +78,16 @@ class EditProfileViewController : BaseViewController, UITextFieldDelegate
             saveCommand()
             return true
         }
+    }
+    
+    @objc private func UpdateLocationNotificationRecieved(notification: NSNotification)
+    {
+        LocationTextField.text = notification.object as! String
+    }
+    
+    @IBAction func updateLocationCommand()
+    {
+        LocationHelper.getLocation()
     }
     
     @objc private func saveCommand()

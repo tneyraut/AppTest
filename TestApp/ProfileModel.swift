@@ -11,11 +11,13 @@ class ProfileModel
     var Username : String?
     var Email : String?
     var PhoneNumber : String?
+    var Location : String?
     
-    init(username: String, email: String, phoneNumber: String)
+    init(username: String, email: String, phoneNumber: String, location: String)
     {
         Username = username
         Email = email
         PhoneNumber = phoneNumber
+        Location = location
     }
 }
