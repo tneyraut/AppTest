@@ -85,6 +85,8 @@ class LoginViewController : BaseViewController, UITextFieldDelegate
         
         userDefaults.set(true, forKey: Constants.IsConnectedCacheKey)
         
+        userDefaults.synchronize()
+        
         navigationController?.popViewController(animated: true)
         
         dismiss(animated: true, completion: nil)
