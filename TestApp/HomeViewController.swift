@@ -67,6 +67,20 @@ class HomeViewController : BaseViewController, UITableViewDelegate, UITableViewD
             isLiked: false))
     }
     
+    @objc private func swipeDislikeCommand(gesture: UISwipeGestureRecognizer)
+    {
+        let userCell = gesture.view as! UserCell
+        
+        let indexPath = self.tableView.indexPath(for: userCell)
+        
+        self.tableView.beginUpdates()
+        self.usersArray.remove(at: (indexPath?.row)!)
+        self.tableView.deleteRows(at: [indexPath!], with: .left)
+        self.tableView.endUpdates()
+        
+        // TODO ajouter un boolean isDisliked
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
@@ -82,6 +96,11 @@ class HomeViewController : BaseViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UserCellId, for: indexPath) as! UserCell
         
         cell.setUser(user: usersArray[indexPath.row])
+        
+        let leftSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeDislikeCommand))
+        leftSwipeGesture.direction = .left
+        
+        cell.addGestureRecognizer(leftSwipeGesture)
         
         return cell
     }

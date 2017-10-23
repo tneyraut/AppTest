@@ -16,6 +16,16 @@ class UserCell : UITableViewCell
     
     private var user : User?
     
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        
+        let rightSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeLikeCommand))
+        rightSwipeGesture.direction = .right
+        
+        addGestureRecognizer(rightSwipeGesture)
+    }
+    
     func setUser(user: User)
     {
         self.user = user
@@ -36,5 +46,40 @@ class UserCell : UITableViewCell
     private func setLikeButtonImage()
     {
         LikeButton.setImage(UIImage(named: (user?.IsLiked)! ? "fillHeart" : "heart"), for: .normal)
+    }
+    
+    @objc private func swipeLikeCommand(gesture: UISwipeGestureRecognizer)
+    {
+        let size = CGSize(width: frame.width, height: frame.height)
+        
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            options: .curveEaseIn,
+            animations:
+            {
+                let position = CGPoint(x: (self.window?.frame.width)! / 2, y: self.frame.origin.y)
+                
+                self.frame = CGRect(origin: position, size: size)
+            },
+            completion:
+            { (finished: Bool) in
+                
+                self.user?.IsLiked = !(self.user?.IsLiked)!
+                
+                self.setLikeButtonImage()
+                
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 0,
+                    options: .curveEaseIn,
+                    animations:
+                    {
+                        let position = CGPoint(x: 0, y: self.frame.origin.y)
+                        
+                        self.frame = CGRect(origin: position, size: size)
+                    },
+                    completion: nil)
+            })
     }
 }

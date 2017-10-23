@@ -65,7 +65,7 @@ class PicturesViewController : BaseViewController, UIImagePickerControllerDelega
         
         if imageView.image != nil
         {
-            if imageView as? RoundedPlaceholderImageView != MainImageView
+            if imageView != MainImageView
             {
                 actionSheet.addAction(UIAlertAction(
                     title: NSLocalizedString("PICTURES_VIEW_CHOOSE_AS_MAIN_PHOTO", comment: ""),
