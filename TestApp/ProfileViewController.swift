@@ -30,12 +30,12 @@ class ProfileViewController : BaseViewController
         setViewElements()
         
         showOrHiddenViewElements()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(UpdateProfileInfoNotificationRecieved), name: Notification.Name.init(Constants.UpdateProfileInfoMessage), object: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool)
+    @objc private func UpdateProfileInfoNotificationRecieved(notification: NSNotification)
     {
-        super.viewDidAppear(animated)
-        
         showOrHiddenViewElements()
     }
     
@@ -101,14 +101,14 @@ class ProfileViewController : BaseViewController
                 email: userDefaults.string(forKey: Constants.EmailCacheKey)!,
                 phoneNumber: userDefaults.string(forKey: Constants.PhoneNumberCacheKey)!,
                 location: userDefaults.string(forKey: Constants.LocationCacheKey)!)
-            
-            return
         }
-        
-        profileModel.Username = userDefaults.string(forKey: Constants.UsernameCacheKey)
-        profileModel.Email = userDefaults.string(forKey: Constants.EmailCacheKey)
-        profileModel.PhoneNumber = userDefaults.string(forKey: Constants.PhoneNumberCacheKey)
-        profileModel.Location = userDefaults.string(forKey: Constants.LocationCacheKey)
+        else
+        {
+            profileModel.Username = userDefaults.string(forKey: Constants.UsernameCacheKey)
+            profileModel.Email = userDefaults.string(forKey: Constants.EmailCacheKey)
+            profileModel.PhoneNumber = userDefaults.string(forKey: Constants.PhoneNumberCacheKey)
+            profileModel.Location = userDefaults.string(forKey: Constants.LocationCacheKey)
+        }
         
         UsernameTextField.text = profileModel.Username
         EmailTextField.text = profileModel.Email

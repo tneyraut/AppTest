@@ -30,4 +30,5 @@ class Constants
     
     // Notification constants
     static let UpdateLocationMessage = "UpdateLocationMessage"
+    static let UpdateProfileInfoMessage = "UpdateProfileInfoMessage"
 }

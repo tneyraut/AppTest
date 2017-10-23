@@ -87,7 +87,9 @@ class LoginViewController : BaseViewController, UITextFieldDelegate
         
         userDefaults.synchronize()
         
-        navigationController?.popViewController(animated: true)
+        NotificationCenter.default.post(
+            name: Notification.Name.init(Constants.UpdateProfileInfoMessage),
+            object: nil)
         
         dismiss(animated: true, completion: nil)
     }

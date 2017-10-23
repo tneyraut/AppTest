@@ -124,6 +124,10 @@ class EditProfileViewController : BaseViewController, UITextFieldDelegate
         
         userDefaults.synchronize()
         
+        NotificationCenter.default.post(
+            name: Notification.Name.init(Constants.UpdateProfileInfoMessage),
+            object: nil)
+        
         closeModal()
     }
 }

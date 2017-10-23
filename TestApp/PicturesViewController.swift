@@ -169,6 +169,10 @@ class PicturesViewController : BaseViewController, UIImagePickerControllerDelega
         
         userDefaults.synchronize()
         
+        NotificationCenter.default.post(
+            name: Notification.Name.init(Constants.UpdateProfileInfoMessage),
+            object: nil)
+        
         closeModal()
     }
 }
